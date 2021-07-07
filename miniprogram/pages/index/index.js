@@ -22,6 +22,31 @@ Page({
     //   })
     //   return
     // }
+    var value = wx.getStorageSync('userdata')
+    if (value) {
+      that.setData({
+        avatarUrl: value.avatarUrl,
+        userInfo: value,
+        hasUserInfo: true,
+        logged: true,
+        username: value.nickName
+      })
+    }
+  },
+
+  logout() {
+    let that = this
+    wx.setStorageSync('userdata', null)
+    that.setData({
+      avatarUrl: './user-unlogin.png',
+      userInfo: null,
+      hasUserInfo: false,
+      logged: false,
+      username: '用户未登录'
+    })
+    wx.showToast({
+      title:'logged out',
+    })
   },
 
   authorization() {
@@ -29,7 +54,11 @@ Page({
     wx.getUserProfile({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        console.log(res.userInfo.avatarUrl)
+        //console.log(res.userInfo.avatarUrl)
+        wx.showToast({
+          title:'授权成功',
+        })
+        wx.setStorageSync('userdata', res.userInfo)
         this.setData({
           avatarUrl: res.userInfo.avatarUrl,
           userInfo: res.userInfo,
