@@ -83,7 +83,11 @@ Page({
   //     })
   //   }
   // },
-
+  toCalendar: function() {
+    wx.navigateTo({
+      url: "../calendar/calendar",
+    })
+  },
 
 
   onGetOpenid: function() {
