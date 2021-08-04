@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="moledule">
+    <text>感染HIV后好好生活：简介</text>
+    <view>picture</view>
+  </view>
+  <view class="moledule">
+    <text>放松策略：有节奏的呼吸</text>
+    <view>picture</view>
+  </view>
+  <view class="moledule">
+    <text>其他</text>
+    <view>picture</view>
+  </view>
+</view>
