@@ -24,30 +24,30 @@
   },
   "tabBar": {
     "color": "#959494",
-    "selectedColor": "#282727",
+    "selectedColor": "#1C6DCD",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "images/emotion.png",
+        "selectedIconPath": "images/selected-emotion.png",
         "iconPath": "images/emotion.png",
         "pagePath": "pages/mainpage/mainpage",
         "text": "情绪记录"
       },
       {
-        "selectedIconPath": "images/med.png",
+        "selectedIconPath": "images/selected-med.png",
         "iconPath": "images/med.png",
         "pagePath": "pages/mainpage/mainpage",
         "text": "服药记录"
       },
       {
-        "selectedIconPath": "images/tracking.png",
+        "selectedIconPath": "images/selected-tracking.png",
         "iconPath": "images/tracking.png",
         "pagePath": "pages/mainpage/mainpage",
         "text": "评估"
       },
       {
-        "selectedIconPath": "images/profile.png",
+        "selectedIconPath": "images/selected-profile.png",
         "iconPath": "images/profile.png",
         "pagePath": "pages/mainpage/mainpage",
         "text": "我的"

@@ -1,7 +1,11 @@
 <view class="container">
   <view class="moledule">
-    <text>感染HIV后好好生活：简介</text>
-    <view>picture</view>
+    <view class="content">
+     <button>eclipse</button>
+     <text class="title">消极思想，情绪和行为</text>
+     <text class="length">5-10min</text>
+    </view>
+    <view class="graph">picture</view>
   </view>
   <view class="moledule">
     <text>放松策略：有节奏的呼吸</text>
