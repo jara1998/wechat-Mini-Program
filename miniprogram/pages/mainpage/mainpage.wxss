@@ -5,9 +5,26 @@
   background-color: aquamarine;
   position: relative;
   margin-top: 3.0rem;
-  margin-bottom: 3.0rem;
+  margin-bottom: 2.5rem;
   border-radius: .5rem;
   width: 90%;
+  transition: 250ms;
+}
+
+.moledule:hover {
+  transform: scale(1.05);
+}
+
+#moledule-one {
+  background-color: #8D92FF;
+}
+
+#moledule-two {
+  background-color: #72bffa;
+}
+
+#moledule-three {
+  background-color: #fc672d;
 }
 
 .content {
@@ -16,10 +33,25 @@
   justify-content: flex-start;
 }
 
-.content > button {
-  position: relative;
-  border-left: 0%;
-  padding-left: 0%;
-  margin-left: 0%;
-  padding-bottom: 100px;
+.check-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin-bottom: 70px;
+}
+
+.check-circle, .title, .length {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.graph {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  height: 130px;
+  width: 130px;
 }
