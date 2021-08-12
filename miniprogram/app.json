@@ -47,7 +47,7 @@
         "text": "评估"
       },
       {
-        "selectedIconPath": "images/selected-profile.png",
+        "selectedIconPath": "images/selected-profile2.png",
         "iconPath": "images/profile.png",
         "pagePath": "pages/mainpage/mainpage",
         "text": "我的"
