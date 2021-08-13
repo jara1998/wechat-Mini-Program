@@ -11,8 +11,9 @@
     {{index + 1}}. {{item.question}}
   </text>
   <radio-group class="radio-set">
-    <label class="radio-label" wx:for="{{options}}">
-      <radio class="radio" value="{{item.value}}" checked="{{item.check}}"/>{{item.option}}
-    </label>
+      <label class="radio-label" wx:for="{{options}}">
+        <radio class="radio" value="{{item.value}}" checked="{{item.check}}"/>
+        <text class="option">{{item.option}}</text>
+      </label>
   </radio-group>
 </view>
