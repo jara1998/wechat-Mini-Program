@@ -45,11 +45,12 @@ exports.main = async (event, context) => {
       is_admin: false,
       reg_time: new Date(),
       last_sign_in: new Date(),
-      med_rec: {},
-      med_track: {
-        med_date: [],
-        mood_score: []
-      }
+      mood_track: {
+        // fixed size: 4
+        mood_date: [-1,-1,-1,-1],
+        mood_score: [-1,-1,-1,-1]
+      },
+      med_date: []
     };
     console.log(to_add_data);
     var add_rec_result = {};
