@@ -58,13 +58,38 @@ Page({
         wx.showToast({
           title:'授权成功',
         })
-        wx.setStorageSync('userdata', res.userInfo)
+        //wx.setStorageSync('userdata', res.userInfo)
         this.setData({
+          gender: res.userInfo.gender,
           avatarUrl: res.userInfo.avatarUrl,
           userInfo: res.userInfo,
           hasUserInfo: true,
           logged: true,
           username: res.userInfo.nickName
+        })
+        //console.log(res.userInfo)
+        wx.cloud.callFunction({
+          name: 'sign_in',
+          data: {
+            avatarUrl: res.userInfo.avatarUrl,
+            nickname: res.userInfo.nickName,
+            gender: res.userInfo.gender
+          },
+          success: out => {
+            console.log('callfunction sucess')
+            console.log(out)
+            if (out.errCode == 0) {
+              app.globalData.data = out.data;
+            } else {
+              console.log(out.errMsg);
+            }
+          },
+          fail: out => {
+            console.log('call function failed')
+          },
+          complete: out => {
+            console.log('call functin completed')
+          }
         })
       }
     })
@@ -83,7 +108,11 @@ Page({
   //     })
   //   }
   // },
-
+  toCalendar: function() {
+    wx.navigateTo({
+      url: "../calendar/calendar",
+    })
+  },
 
 
   onGetOpenid: function() {

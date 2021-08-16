@@ -7,6 +7,8 @@
     <text>{{username}}</text>
   </view>
 
+  
+
 
   <!-- 上传图片 -->
   <!-- <view class="uploader">
@@ -39,6 +41,10 @@
       <text>快速新建云函数</text>
     </navigator>
   </view> -->
+
+  <view class="uploader">
+    <button bindtap="toCalendar">go to calendar</button>
+  </view>
 
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
