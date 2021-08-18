@@ -7,11 +7,8 @@
     <text>{{username}}</text>
   </view>
 
-<<<<<<< HEAD
   
 
-=======
->>>>>>> origin/garrett
 
   <!-- 上传图片 -->
   <!-- <view class="uploader">
@@ -45,13 +42,10 @@
     </navigator>
   </view> -->
 
-<<<<<<< HEAD
   <view class="uploader">
     <button bindtap="toCalendar">go to calendar</button>
   </view>
 
-=======
->>>>>>> origin/garrett
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 
