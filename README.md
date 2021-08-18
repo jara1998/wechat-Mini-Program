@@ -1,2 +1,2 @@
-# log in & authorization function
+# HIV adherence track Wechat mini app program
 
