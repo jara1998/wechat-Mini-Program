@@ -36,7 +36,7 @@
     "minifyWXSS": true,
     "showES6CompileOption": false
   },
-  "appid": "wx9f512bfdc32f1a15",
+  "appid": "wxce2e39d26aad783a",
   "projectname": "miniprogram-2",
   "libVersion": "2.14.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
