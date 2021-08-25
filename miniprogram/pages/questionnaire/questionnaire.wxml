@@ -11,9 +11,9 @@
     {{index + 1}}. {{item.value}}
   </text>
   <radio-group mark:groupMark="{{index}}" class="radio-set" bindchange="radio_change">
-      <label class="radio-label" wx:for="{{options}}">
-        <radio class="radio" value="{{item.value}}" bindtap="test" data-index="{{index}}"/>
-        <text class="option" bindtap="test" data-index="{{index}}">{{item.value}}</text>
+      <label class="radio-label" wx:for="{{options}}" bindtap="onTap" data-index="{{index}}">
+        <radio class="radio" value="{{item.value}}" />
+        <text class="option" >{{item.value}}</text>
       </label>
   </radio-group>
 </view>

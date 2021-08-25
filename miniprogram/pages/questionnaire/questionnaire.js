@@ -20,7 +20,7 @@ Page({
     scores: [0, 0, 0, 0, 0, 0] // to store the score for each question
   },
 
-  test(event) {
+  onTap(event) {
     console.log(event.currentTarget.dataset.index);
     console.log(event.mark.groupMark);
     console.log("tapped");
