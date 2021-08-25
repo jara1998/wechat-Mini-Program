@@ -8,7 +8,7 @@
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": true,\
+    "newFeature": true,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
