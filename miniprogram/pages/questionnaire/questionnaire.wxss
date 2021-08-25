@@ -1,0 +1,35 @@
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10rpx 10rpx 0rpx 10rpx;
+}
+
+.subtitle {
+  opacity: 50%;
+  margin: 10rpx 10rpx 0rpx 10rpx;
+}
+
+.question-set {
+  margin: 0rpx 10rpx 0rpx 10rpx;
+}
+
+.radio-set {
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+.radio-label {
+  flex-grow: 1;
+}
+
+.radio {
+  transform: scale(0.7);
+}
+
+.option {
+  font-size: small;
+}
