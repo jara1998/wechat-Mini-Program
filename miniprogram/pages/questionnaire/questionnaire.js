@@ -49,6 +49,7 @@ Page({
     var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
     var weekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
     //////
+    // console.log(week_number)
     wx.cloud.callFunction({
       name: 'mood_tracking_complete',
       data: {
