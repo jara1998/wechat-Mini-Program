@@ -24,7 +24,12 @@ Page({
     let questionNum = event.mark.groupMark
     let answerNum = event.currentTarget.dataset.index;
 
-    this.data.answers[questionNum] = this.data.options[answerNum].option;
+    // this.data.answers[questionNum] = this.data.options[answerNum].option;
+    var temp = this.data.answers
+    temp[questionNum] = this.data.options[answerNum]
+    this.setData({
+      answers: temp
+    })
     
   },
 
