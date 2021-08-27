@@ -44,25 +44,28 @@ Page({
 
   mood_submit() {
     // Calculate the week number of the year
-    currDate = new Date();
+    var currDate = new Date();
     var janOne = new Date(currDate.getFullYear(),0,1);
     var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
     var weekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
     //////
     // console.log(week_number)
+
     wx.cloud.callFunction({
-      name: 'mood_tracking_complete',
+      name: 'mood_question_completed',
       data: {
-        weekNum
+        week: weekNum
       },
       success: out => {
-        if (out) {
+        console.log(out.result.data.is_completed)
+        if (out.result.data.is_completed) {
           wx.showToast({
             title:'您本周已经提交过调查问卷，不可重复提交',
           })  // the user has submitted this week
           return
         }
         const allScores = this.data.answers
+        console.log("all scores: " + allScores)
         let total = 0
         for (var i = 0; i < allScores.length; i++) {
           if (allScores[i] < 0) {
@@ -73,7 +76,11 @@ Page({
           }
           total += allScores[i]
         }
-        finalScore = Math.round((1 - total / this.data.highestScore) * 100)
+        console.log('total: ' + total)
+        console.log(this.data.highestScore)
+        var finalScore = Math.round((total / this.data.highestScore) * 100)
+        console.log(weekNum)
+        console.log(finalScore)
         wx.cloud.callFunction({
           name: 'mood_tracking_submit',
           data: {
@@ -81,7 +88,7 @@ Page({
             score: finalScore
           },
           success: out => {
-            console.log('Questionnaire successfully submitted.')
+            console.log(out)
             wx.showToast({
               title:'提交成功',
             })
