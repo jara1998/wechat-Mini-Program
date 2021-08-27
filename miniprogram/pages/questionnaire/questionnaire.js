@@ -13,7 +13,7 @@ Page({
               {option: 2, value: '偶尔或适量 3-4天'},
               {option: 3, value: '大部分或所有 5-7天'}],
     answers: [-1, -1, -1, -1, -1, -1],
-    highestScore: 18.0
+    highestScore: 18.0  // 6 * 3
   },
 /////////////////////////// "Submit" - In progress
   onTap(event) {
@@ -26,10 +26,11 @@ Page({
 
     // this.data.answers[questionNum] = this.data.options[answerNum].option;
     var temp = this.data.answers
-    temp[questionNum] = this.data.options[answerNum]
+    temp[questionNum] = this.data.options[answerNum].option
     this.setData({
       answers: temp
     })
+    console.log(temp)
     
   },
 
@@ -44,20 +45,25 @@ Page({
 
   mood_submit() {
     // Calculate the week number of the year
-    currDate = new Date();
+    var currDate = new Date();
     var janOne = new Date(currDate.getFullYear(),0,1);
     var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
     var weekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
     //////
+    console.log('submitting')
     wx.cloud.callFunction({
-      name: 'mood_tracking_complete',
+      name: 'mood_question_completed',
       data: {
-        weekNum
+        week: weekNum
       },
       success: out => {
-        if (out) {
+        console.log('mood_question_completed success')
+        console.log(out)
+        if (out.result.data.is_completed) {
+          console.log("unfinished")
           wx.showToast({
-            title:'您本周已经提交过调查问卷，不可重复提交',
+            title: '您本周已经提交',
+            icon: 'none'
           })  // the user has submitted this week
           return
         }
@@ -66,13 +72,16 @@ Page({
         for (var i = 0; i < allScores.length; i++) {
           if (allScores[i] < 0) {
             wx.showToast({
-              title:'您尚未完成所有问题',
+              title:'您尚未完成问卷',
+              icon: 'none'
             })
             return
           }
           total += allScores[i]
         }
-        finalScore = Math.round((1 - total / this.data.highestScore) * 100)
+        var finalScore = Math.round((total / this.data.highestScore) * 100)
+        console.log(finalScore)
+        console.log(this.data.answers)
         wx.cloud.callFunction({
           name: 'mood_tracking_submit',
           data: {
@@ -83,6 +92,7 @@ Page({
             console.log('Questionnaire successfully submitted.')
             wx.showToast({
               title:'提交成功',
+              icon: 'success'
             })
           }
         })
