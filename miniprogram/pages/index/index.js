@@ -88,7 +88,7 @@ Page({
             console.log('call function failed')
           },
           complete: out => {
-            console.log('call functin completed')
+            console.log('call function completed')
           }
         })
       }

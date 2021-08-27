@@ -19,5 +19,5 @@
 </view>
 
 <view class="uploader">
-    <button  bindtap="mood_submit" style="position: relative; left: -29rpx; top: 0rpx">提交</button> 
+    <button bindtap="mood_submit" style="position: relative; left: -29rpx; top: 0rpx">提交</button> 
 </view>
