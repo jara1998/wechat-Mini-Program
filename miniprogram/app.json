@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/questionnaire/questionnaire",
     "pages/index/index",
+    "pages/questionnaire/questionnaire",
     "pages/calendar/calendar",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

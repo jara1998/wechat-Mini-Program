@@ -1,5 +1,6 @@
 // pages/index.js
 const MONTHS = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May.', 'June.', 'July.', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+const app = getApp()
 
 Page({
 
@@ -127,12 +128,36 @@ Page({
         });
     },
 
+    // this should be linked to an button, need to be renamed
     dayClick: function(res) {
-        var date = {
-            year: res.detail.year,
-            month: res.detail.month,
-            day: res.detail.day
-        }
-        console.log(date)
+        // var date = {
+        //     year: res.detail.year,
+        //     month: res.detail.month,
+        //     day: res.detail.day
+        // }
+        var today = new Date();
+        // console.log("old med date");
+        // console.log(app.globalData.data.med_date);
+        wx.cloud.callFunction({
+            name: 'medication_track',
+            data: {
+                date: today
+            }
+        })
+        .then(res => {
+            // console.log("new med_date data");
+            // console.log(res.result);
+            // stores latest med_date array to global data
+            app.globalData.data.med_date = res.result.data.med_date;
+            // console.log(app.globalData.data);
+        });
+        // var demo5_days_style = this.data.demo5_days_style;
+        // demo5_days_style.push({
+        //     month: 'current', day: today.getDay(), color: 'white', background: '#84e7d0'
+        // })
+        // console.log(today.getDay());
+        // this.setData({
+        //     demo5_days_style
+        // })
     }
 })

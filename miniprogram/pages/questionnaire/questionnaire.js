@@ -80,11 +80,7 @@ Page({
           }
           total += allScores[i]
         }
-<<<<<<< HEAD
         var finalScore = Math.round(total)
-=======
-        var finalScore = Math.round((total / this.data.highestScore) * 100)
->>>>>>> bafa6b6b9f00b5ccb56202867950b257d5f14351
         console.log(finalScore)
         console.log(this.data.answers)
         wx.cloud.callFunction({
