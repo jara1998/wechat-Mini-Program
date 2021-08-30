@@ -68,6 +68,7 @@ Page({
           return
         }
         const allScores = this.data.answers
+        console.log("all scores: " + allScores)
         let total = 0
         for (var i = 0; i < allScores.length; i++) {
           if (allScores[i] < 0) {
@@ -79,7 +80,11 @@ Page({
           }
           total += allScores[i]
         }
+<<<<<<< HEAD
         var finalScore = Math.round((total / this.data.highestScore) * 100)
+=======
+        var finalScore = Math.round(total)
+>>>>>>> jara_backend_cloudfunction
         console.log(finalScore)
         console.log(this.data.answers)
         wx.cloud.callFunction({
@@ -89,7 +94,8 @@ Page({
             score: finalScore
           },
           success: out => {
-            console.log('Questionnaire successfully submitted.')
+            console.log(out)
+            app.globalData.data = out.data;
             wx.showToast({
               title:'提交成功',
               icon: 'success'
@@ -100,4 +106,3 @@ Page({
     })
   }
 })
-
