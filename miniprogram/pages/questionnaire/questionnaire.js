@@ -80,6 +80,7 @@ Page({
           }
           total += allScores[i]
         }
+
         var finalScore = Math.round(total)
         console.log(finalScore)
         console.log(this.data.answers)
