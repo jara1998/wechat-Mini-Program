@@ -80,11 +80,7 @@ Page({
           }
           total += allScores[i]
         }
-<<<<<<< HEAD
-        var finalScore = Math.round((total / this.data.highestScore) * 100)
-=======
         var finalScore = Math.round(total)
->>>>>>> jara_backend_cloudfunction
         console.log(finalScore)
         console.log(this.data.answers)
         wx.cloud.callFunction({
