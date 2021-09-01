@@ -1,7 +1,18 @@
 <view class="container-fluid">
-    <view class="demo6">
+    <view class="title">
+        <text id="title-weekday">{{weekday}}</text>
+        <text>\n</text>
+        <text>\n</text>
+        <text id="title-month">{{str}}</text>
+        <text>\n</text>
+        <text id="title-date">{{day}}</text>
+        <text>\n</text>
+        <text>\n</text>
+        <text id="title-year">{{year}}</text>
+    </view>
+    <view class="demo5">
         <calendar 
-        weeks-type="en" 
+        weeks-type="cn" 
         cell-size="40" 
         next="{{true}}" prev="{{true}}" show-more-days="{{true}}"
         calendar-style="demo5-calendar" 
@@ -10,5 +21,10 @@
         days-color="{{demo5_days_style}}" 
         binddayClick="dayClick"
         />
+    </view>
+    <view>
+        <button class="submit-btn" bindtap="onClick" hover-class="btn-hover">
+        Submit
+        </button>
     </view>
 </view>
