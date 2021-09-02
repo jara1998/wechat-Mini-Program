@@ -4,7 +4,17 @@
   margin-bottom: 2.5rem;
   border-radius: .5rem;
   width: 90%;
+  height: 180px;
   transition: 250ms;
+  background-color: #eeeeee;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
 }
 
 .content {
@@ -15,18 +25,6 @@
 
 .moledule:hover {
   transform: scale(1.03);
-}
-
-#moledule-one {
-  background-color: #eeeeee;
-}
-
-#moledule-two {
-  background-color: #72bffa;
-}
-
-#moledule-three {
-  background-color: #fc672d;
 }
 
 .check-circle {
