@@ -1,8 +1,4 @@
 .moledule {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: aquamarine;
   position: relative;
   margin-top: 3.0rem;
   margin-bottom: 2.5rem;
@@ -11,12 +7,18 @@
   transition: 250ms;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .moledule:hover {
   transform: scale(1.03);
 }
 
 #moledule-one {
-  background-color: #8D92FF;
+  background-color: #eeeeee;
 }
 
 #moledule-two {
@@ -27,12 +29,6 @@
   background-color: #fc672d;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 .check-circle {
   width: 20px;
   height: 20px;
@@ -41,17 +37,10 @@
   border-width: 2px;
   border-color: black;
   margin-bottom: 70px;
+  margin-right: 4%;
 }
 
 .check-circle, .title, .length {
   margin-top: 10px;
   margin-left: 10px;
-}
-
-.graph {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  height: 130px;
-  width: 130px;
 }

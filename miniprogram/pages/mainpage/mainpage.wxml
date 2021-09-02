@@ -1,26 +1,16 @@
 <view class="container">
   <view class="moledule" id="moledule-one">
     <view class="content">
-     <view class="check-circle"></view>
-     <text class="title">消极思想，情绪和行为</text>
-     <text class="length">5-10min</text>
+      <text class="title">消极思想，情绪和行为</text>
+      <view class="check-circle"></view>
     </view>
-    <image src="../../images/windy.png" class="graph">picture</image>
   </view>
   <view class="moledule" id="moledule-two">
-    <view class="content">
-     <view class="check-circle"></view>
-     <text class="title">选择有价值的生活</text>
-     <text class="length">5-10min</text>
-    </view>
-    <image src="../../images/snow.png" class="graph">picture</image>
+    <text class="title">选择有价值的生活</text>
+    <view class="check-circle"></view>
   </view>
   <view class="moledule" id="moledule-three">
-    <view class="content">
+    <text class="title">选做模块</text>
      <view class="check-circle"></view>
-     <text class="title">选做模块</text>
-     <text class="length">5-45min</text>
-    </view>
-    <image src="../../images/evening.png" class="graph">picture</image>
   </view>
 </view>

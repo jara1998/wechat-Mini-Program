@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -18,8 +19,6 @@
           "query": ""
         },
         {
-          "name": "mainpage",
-          "pathName": "pages/mainpage/mainpage",
           "id": 1,
           "name": "pages/charts/charts",
           "pathName": "pages/charts/charts",
@@ -43,6 +42,12 @@
         {
           "name": "pages/questionnaire/questionnaire",
           "pathName": "pages/questionnaire/questionnaire",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mainpage/mainpage",
+          "pathName": "pages/mainpage/mainpage",
           "query": "",
           "scene": null
         }
