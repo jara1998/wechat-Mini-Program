@@ -45,7 +45,7 @@ Page({
         console.log(out);
         if (out.result.errCode == 0) {
           if (out.result.data.registered) {
-            app.globalData.data = out.result.data;
+            app.globalData.userData = out.result.data.userData;
             console.log(out.errMsg);
             this.setData({
               gender: out.result.data.userData.gender,
@@ -116,7 +116,7 @@ Page({
             console.log('callfunction sucess');
             console.log(out);
             if (out.result.errCode == 0) {
-              app.globalData.data = out.result.data;
+              app.globalData.userData = out.result.data;
             } else {
               console.log(out.errMsg);
             }

@@ -14,7 +14,7 @@ Page({
         day: new Date().getDate(),
         str: MONTHS[new Date().getMonth()],  // 月份字符串
         weekday: WEEKDAYS[new Date().getDay()], // 星期几
-
+        is_completed: false,
         demo5_days_style: [],
     },
 
@@ -38,9 +38,19 @@ Page({
             }
         }
         demo5_days_style.push({ month: 'current', day: this.data.day, color: 'white', background: '#b49eeb' });
-
+        console.log("last med date");
+        console.log(app.globalData.userData);
+        var last_med_date = new Date(app.globalData.userData.med_date[0]);
+        // console.log(last_med_date.getFullYear() + ", " + this.data.year);
+        // console.log(last_med_date.getMonth() + ", " + (this.data.month - 1));
+        // console.log(last_med_date.getDate() + ", " + this.data.day);
+        // if today's medication task is finished, show the block "今日用药已完成"
+        var is_completed = (last_med_date.getFullYear() == this.data.year 
+                            && last_med_date.getMonth() == this.data.month - 1
+                            && last_med_date.getDate() == this.data.day);
         this.setData({
-            demo5_days_style
+            demo5_days_style,
+            is_completed: is_completed
         });
         
     },
@@ -49,9 +59,19 @@ Page({
     // Effect: Sends a JSON to the database with information about
     //         the exact time of when the submit button is clicked
     onClick: function(res) {
+        this.setData({
+            is_completed: true
+        });
+        wx.showToast({
+            title: '已完成今日用药',
+            duration: 2000,
+            mask: true,
+            icon: 'success'
+        })
         var today = new Date();
         // console.log("old med date");
         // console.log(app.globalData.data.med_date);
+        
         wx.cloud.callFunction({
             name: 'medication_track',
             data: {
@@ -60,11 +80,10 @@ Page({
         })
         .then(res => {
             console.log("new med_date data");
-            console.log(res.result.data.med_date);
+            // console.log(res.result.data.med_date);
             // stores latest med_date array to global data
-            app.globalData.data.med_date = res.result.data.med_date;
-            console.log(app.globalData.data);
+            app.globalData.userData.med_date = res.result.data.med_date;
+            console.log(app.globalData.userData);
         });
-
     }
 })
