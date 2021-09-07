@@ -151,7 +151,7 @@ Page({
     })
   },
 
-  toQuestionnaire: function() {
+  toQuesetionnaire: function() {
     wx.navigateTo({
       url: "../questionnaire/questionnaire",
     })
