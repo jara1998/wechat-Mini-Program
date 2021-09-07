@@ -1,7 +1,6 @@
 //app.js
 App({
   globalData: {
-    userData: {}
   },
 
   onLaunch: function () {
@@ -17,7 +16,5 @@ App({
         traceUser: true,
       })
     }
-
-    this.globalData = {}
   }
 })

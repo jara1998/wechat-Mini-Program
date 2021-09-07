@@ -22,9 +22,14 @@
         binddayClick="dayClick"
         />
     </view>
-    <view>
+    <view wx:if="{{!is_completed}}">
         <button class="submit-btn" bindtap="onClick" hover-class="btn-hover">
-        Submit
-        </button>
+        我今天已完成用药
+        </button> 
+    </view>
+    <view wx:else>
+        <button class="submit-btn" bindtap="onClick" hover-class="btn-hover" type="default" disabled="{{true}}">
+        今日用药已完成
+        </button> 
     </view>
 </view>

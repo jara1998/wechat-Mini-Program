@@ -1,7 +1,6 @@
 //app.js
 App({
   globalData: {
-    userData: {}
   },
 
   onLaunch: function () {

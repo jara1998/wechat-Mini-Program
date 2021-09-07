@@ -91,7 +91,7 @@ Page({
           },
           success: out => {
             console.log(out)
-            app.globalData.data = out.data;
+            app.globalData.userData.mood_track = out.result.data.mood_track;
             wx.showToast({
               title:'提交成功',
               icon: 'success'
