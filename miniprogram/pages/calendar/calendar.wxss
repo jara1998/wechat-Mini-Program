@@ -3,14 +3,44 @@ page {
 }
 
 
-.calendar-box {
+.title {
+  border-radius: 15px;
   display: flex;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   color: white;
-  background-image: linear-gradient(to bottom, #6295eb 0%, #586fc2 50%, #5052a4 100%);
+  background-color:rgba(0, 100, 0, 0.6);
   box-shadow: 0px 11px 2px 1px rgba(234, 234, 229, 0.3);
+}
+
+#title-weekday {
+  font-size: 16px;
+}
+
+#title-month {
+  font-size: 21px;
+}
+
+#title-date {
+  font-size: 60px;
+}
+
+#title-year {
+  font-size: 21px;
+}
+
+.submit-btn {
+  width: 90%;
+  margin-top: 30rpx;
+  background-color: rgba(0, 100, 0, 0.6);
+  color: #FFF;
+}
+
+.btn-hover {
+  background-color: #b49eeb;
 }
 
 .calendar-box .left {
@@ -57,54 +87,6 @@ page {
   display: block;
 }
 
-.demo2 {
-  background-image: linear-gradient(to bottom, #2e5d91 0%, #2f3e79 100%);
-  padding-top: 10px;
-  padding-bottom: 10px;    
-}
-
-.demo2-header {
-  font-size: large;
-  color: #3ed7f6;
-}
-
-
-.demo2-board {
-  color: #3ed7f6;
-}
-
-
-.demo3 {
-  background-color: #eeedff;
-  padding-top: 10px;
-}
-
-.demo3-header {
-  font-size: large;
-  color: #605eac;
-}
-
-
-.demo3-board {
-  background-color: #dddcff;
-  color: white;
-}
-
-
-.demo4-calendar {
-  background-color: #413a60;
-  padding-top: 10px;
-}
-
-.demo4-header {
-  font-size: large;
-  color: white;
-}
-
-.demo4-board {
-  color: white;
-}
-
 .demo5 {
   padding: 15px;
 }
@@ -122,25 +104,5 @@ page {
 
 .demo5-board {
   color: #c7cbe2;
-  font-weight: bold;
-}
-
-.demo6 {
-  padding: 15px;
-}
-
-.demo6-calendar {
-  background-color: #fff043;
-  padding-top: 10px;    
-  box-shadow: 5px 5px 2px 1px rgba(255, 240, 67, 0.5);
-}
-
-.demo6-header {
-  font-size: large;
-  color: black;    
-}
-
-.demo6-board {
-  color: #ff8a43;
   font-weight: bold;
 }

@@ -37,7 +37,7 @@
     "showES6CompileOption": false
   },
   "appid": "wxce2e39d26aad783a",
-  "projectname": "wechat-Mini-Program",
+  "projectname": "miniprogram-2",
   "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
@@ -56,12 +56,37 @@
     "game": {
       "list": []
     },
+    "gamePlugin": {
+      "list": []
+    },
     "miniprogram": {
       "list": [
         {
           "id": -1,
           "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "pages/charts/charts",
+          "pathName": "pages/charts/charts",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/medTracking/medTracking",
+          "pathName": "pages/medTracking/medTracking",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "pages/moodTracking/moodTracking",
+          "pathName": "pages/moodTracking/moodTracking",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -1,5 +1,4 @@
 {
-  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -19,10 +18,6 @@
           "query": ""
         },
         {
-          "name": "mainpage",
-          "pathName": "pages/mainpage/mainpage",
-          "query": "",
-          "scene": null
         }
       ]
     }
