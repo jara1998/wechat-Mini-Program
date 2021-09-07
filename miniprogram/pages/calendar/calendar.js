@@ -42,6 +42,7 @@ Page({
         this.setData({
             demo5_days_style
         });
+        
     },
 
     // EventHandler linked to the sumbit button.
