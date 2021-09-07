@@ -151,6 +151,12 @@ Page({
     })
   },
 
+  toQuestionnaire: function() {
+    wx.navigateTo({
+      url: "../questionnaire/questionnaire",
+    })
+  },
+
 
   onGetOpenid: function() {
     // 调用云函数
