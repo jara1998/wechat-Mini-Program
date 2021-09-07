@@ -58,3 +58,13 @@
   position: relative;
   left: 14px;
 }
+
+.submit-button {
+  position: relative;
+  left: -114px
+}
+
+.button-submit {
+  background-color: #1AAD19;
+  opacity: 0.5;
+}
