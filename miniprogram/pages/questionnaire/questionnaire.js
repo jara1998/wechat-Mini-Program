@@ -91,7 +91,8 @@ Page({
           },
           success: out => {
             console.log(out)
-            app.globalData.userData = out.data;
+            // stores latest mood_track data into app.globalData
+            app.globalData.userData.mood_track = out.result.data.mood_track;
             wx.showToast({
               title:'提交成功',
               icon: 'success'
