@@ -134,5 +134,7 @@ Page({
             day: res.detail.day
         }
         console.log(date)
+        var detail = res.detail
+        console.log(detail)
     }
 })
