@@ -1,6 +1,12 @@
 //app.js
 App({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  globalData: {
+  },
+
+>>>>>>> jara_backend_cloudfunction
 =======
   globalData: {
   },
@@ -20,9 +26,14 @@ App({
       })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     this.globalData = {}
 =======
+>>>>>>> jara_backend_cloudfunction
+=======
+
+    this.globalData = {}
 >>>>>>> jara_backend_cloudfunction
   }
 })

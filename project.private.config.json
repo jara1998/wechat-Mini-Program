@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
   "setting": {},
+=======
+>>>>>>> jara_backend_cloudfunction
   "condition": {
     "plugin": {
       "list": []
@@ -19,8 +22,34 @@
           "query": ""
         },
         {
+<<<<<<< HEAD
           "name": "mainpage",
           "pathName": "pages/mainpage/mainpage",
+=======
+          "id": 1,
+          "name": "pages/charts/charts",
+          "pathName": "pages/charts/charts",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/medTracking/medTracking",
+          "pathName": "pages/medTracking/medTracking",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "pages/moodTracking/moodTracking",
+          "pathName": "pages/moodTracking/moodTracking",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/questionnaire",
+          "pathName": "pages/questionnaire/questionnaire",
+>>>>>>> jara_backend_cloudfunction
           "query": "",
           "scene": null
         }
