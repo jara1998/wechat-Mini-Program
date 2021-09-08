@@ -15,6 +15,9 @@
   bottom: 0;
   left: 0;
   background-size: cover;
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 
 .content {
