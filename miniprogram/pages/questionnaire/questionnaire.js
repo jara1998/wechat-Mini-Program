@@ -20,10 +20,31 @@ Page({
             ],
             
     answers: [-1, -1, -1, -1, -1, -1],
-    highestScore: 18.0  // 6 * 3
+    highestScore: 18.0,  // 6 * 3
+    is_completed: false
+  },
+
+  onLoad: function (options) {
+    // The most recent week during which the questionaire was completed
+    var last_questionare_week = app.globalData.userData.mood_track.mood_date[0];
+
+    // Calculates the number of weeks into the program according to today's date
+    var currDate = new Date();
+    var janOne = new Date(currDate.getFullYear(),0,1);
+    var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
+    var curWeekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
+
+    // Check if today is in the week, in which the questionare has already been
+    // sumbitted
+    var is_completed = (curWeekNum == last_questionare_week);
+
+    this.setData({
+      is_completed: is_completed
+    });
   },
 /////////////////////////// "Submit" - In progress
   onTap(event) {
+    console.log(app.globalData.userData.mood_track);
     console.log(event.currentTarget.dataset.index);
     console.log(event.mark.groupMark);
     console.log("tapped");
@@ -51,59 +72,41 @@ Page({
   // },
 
   mood_submit() {
+    const allScores = this.data.answers
+    let total = 0
+    for (var i = 0; i < allScores.length; i++) {
+      if (allScores[i] < 0) {
+        wx.showToast({
+          title:'您尚未完成问卷',
+          icon: 'none'
+        })
+        return
+      }
+      total += allScores[i]
+    }
+    var finalScore = Math.round(total)
+
     // Calculate the week number of the year
     var currDate = new Date();
     var janOne = new Date(currDate.getFullYear(),0,1);
     var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
     var weekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
-    //////
-    console.log('submitting')
+    this.setData({
+      is_completed: true
+    });
+
     wx.cloud.callFunction({
-      name: 'mood_question_completed',
+      name: 'mood_tracking_submit',
       data: {
-        week: weekNum
+        week: weekNum,
+        score: finalScore
       },
       success: out => {
-        console.log('mood_question_completed success')
         console.log(out)
-        if (out.result.data.is_completed) {
-          console.log("unfinished")
-          wx.showToast({
-            title: '您本周已经提交',
-            icon: 'none'
-          })  // the user has submitted this week
-          return
-        }
-        const allScores = this.data.answers
-        console.log("all scores: " + allScores)
-        let total = 0
-        for (var i = 0; i < allScores.length; i++) {
-          if (allScores[i] < 0) {
-            wx.showToast({
-              title:'您尚未完成问卷',
-              icon: 'none'
-            })
-            return
-          }
-          total += allScores[i]
-        }
-        var finalScore = Math.round(total)
-        console.log(finalScore)
-        console.log(this.data.answers)
-        wx.cloud.callFunction({
-          name: 'mood_tracking_submit',
-          data: {
-            week: weekNum,
-            score: finalScore
-          },
-          success: out => {
-            console.log(out)
-            app.globalData.userData.mood_track = out.result.data.mood_track;
-            wx.showToast({
-              title:'提交成功',
-              icon: 'success'
-            })
-          }
+        app.globalData.userData.mood_track = out.result.data.mood_track;
+        wx.showToast({
+          title:'提交成功',
+          icon: 'success'
         })
       }
     })
