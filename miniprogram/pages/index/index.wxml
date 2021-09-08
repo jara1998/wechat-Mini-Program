@@ -45,6 +45,10 @@
   <view class="uploader">
     <button bindtap="toCalendar">go to calendar</button>
   </view>
+  
+  <view class="uploader">
+    <button bindtap="toQuesetionnaire">go to Quesetionnaire</button>
+  </view>
 
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
