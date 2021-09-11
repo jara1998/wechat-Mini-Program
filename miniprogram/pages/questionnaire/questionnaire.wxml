@@ -6,18 +6,29 @@
   <text>在过去的七天，您受一下问题困扰的频率如何?</text>
 </view>
 
-<view class="question-set" wx:for="{{questions}}">
-  <text class="question">
-    {{index + 1}}. {{item.value}}
-  </text>
-  <radio-group mark:groupMark="{{index}}" class="radio-set">
+<view wx:if="{{!is_completed}}">
+  <view class="question-set" wx:for="{{questions}}">
+    <text class="question">
+      {{index + 1}}. {{item.value}}
+    </text>
+    <radio-group mark:groupMark="{{index}}" class="radio-set">
       <label class="radio-label" wx:for="{{options}}" bindtap="onTap" data-index="{{index}}">
-        <radio class="radio" value="{{item.value}}" />
-        <text class="option" >{{item.value}}</text>
-      </label>
-  </radio-group>
-</view>
+        <view class="choices">
+          <radio class="radio" value="{{item.value}}" />
+          <view class="hline"></view>
+          <view class="vline"></view>
+          <text class="option" >{{item.value}}</text>
+        </view>
+        </label>
+    </radio-group>
+  </view>
 
-<view class="uploader">
-    <button bindtap="mood_submit" style="position: relative; left: -29rpx; top: 0rpx">提交</button> 
+  <view class="uploader">
+      <button class="submit-button" bindtap="mood_submit" hover-class="button-submit" style="width: 140vw">
+      提交
+      </button> 
+  </view>
+</view>
+<view wx:else>
+  <text>You are done for the questionare of the week</text>
 </view>
