@@ -50,7 +50,7 @@
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 
   </view>
-  <view class="uploader" wx:else>
+  <!-- <view class="uploader" wx:else>
     <button  bindtap="logout" style="position: relative; left: -29rpx; top: 0rpx">Logout</button> 
-  </view>
+  </view> -->
 </view>
