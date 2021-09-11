@@ -36,12 +36,12 @@
     "minifyWXSS": true,
     "showES6CompileOption": false
   },
-  "appid": "wx9f512bfdc32f1a15",
-  "projectname": "miniprogram-2",
+  "appid": "wxce2e39d26aad783a",
+  "projectname": "wechat-Mini-Program",
   "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "compileType": "miniprogram",
   "condition": {
     "search": {
       "list": []

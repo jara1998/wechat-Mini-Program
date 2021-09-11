@@ -14,7 +14,7 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room",
-    "pages/mainpage/mainpage"
+    "pages/questionnaire/questionnaire"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
