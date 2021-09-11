@@ -1,0 +1,36 @@
+/* miniprogram/pages/medTracking.wxss */
+ec-canvas {
+  width: 90%;
+  height: 600rpx;
+}
+
+
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.dateHeader {
+  text-align: center;
+  font-size: 14px;
+  color: #1C6DCD;
+  padding-bottom: 5%;
+}
+
+.stats{
+  font-size: 18px;
+  float: left;
+  color: #979797;
+  margin: 10px;
+  padding-top: 3px;
+}
+
+.data{
+  float: left;
+  font-size: 24px;
+  color: #1C6DCD;
+  margin: 10px;
+}

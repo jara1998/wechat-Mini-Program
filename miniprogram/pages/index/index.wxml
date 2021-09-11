@@ -7,6 +7,8 @@
     <text>{{username}}</text>
   </view>
 
+  
+
 
   <!-- 上传图片 -->
   <!-- <view class="uploader">
@@ -40,11 +42,19 @@
     </navigator>
   </view> -->
 
+  <view class="uploader">
+    <button bindtap="toCalendar">go to calendar</button>
+  </view>
+  
+  <view class="uploader">
+    <button bindtap="toQuesetionnaire">go to Quesetionnaire</button>
+  </view>
+
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 
   </view>
-  <view class="uploader" wx:else>
+  <!-- <view class="uploader" wx:else>
     <button  bindtap="logout" style="position: relative; left: -29rpx; top: 0rpx">Logout</button> 
-  </view>
+  </view> -->
 </view>

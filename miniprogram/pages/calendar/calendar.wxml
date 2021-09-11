@@ -1,0 +1,35 @@
+<view class="container-fluid">
+    <view class="title">
+        <text id="title-weekday">{{weekday}}</text>
+        <text>\n</text>
+        <text>\n</text>
+        <text id="title-month">{{str}}</text>
+        <text>\n</text>
+        <text id="title-date">{{day}}</text>
+        <text>\n</text>
+        <text>\n</text>
+        <text id="title-year">{{year}}</text>
+    </view>
+    <view class="demo5">
+        <calendar 
+        weeks-type="cn" 
+        cell-size="40" 
+        next="{{true}}" prev="{{true}}" show-more-days="{{true}}"
+        calendar-style="demo5-calendar" 
+        header-style="demo5-header" 
+        board-style="demo5-bord" 
+        days-color="{{demo5_days_style}}" 
+        binddayClick="dayClick"
+        />
+    </view>
+    <view wx:if="{{!is_completed}}">
+        <button class="submit-btn" bindtap="onClick" hover-class="btn-hover">
+        我今天已完成用药
+        </button> 
+    </view>
+    <view wx:else>
+        <button class="submit-btn" bindtap="onClick" hover-class="btn-hover" type="default" disabled="{{true}}">
+        今日用药已完成
+        </button> 
+    </view>
+</view>

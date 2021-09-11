@@ -22,35 +22,72 @@ Page({
     //   })
     //   return
     // }
-    var value = wx.getStorageSync('userdata')
-    if (value) {
-      that.setData({
-        avatarUrl: value.avatarUrl,
-        userInfo: value,
-        hasUserInfo: true,
-        logged: true,
-        username: value.nickName
-      })
-    }
+    // var value = wx.getStorageSync('userdata')
+    // if (value) {
+    //   that.setData({
+    //     avatarUrl: value.avatarUrl,
+    //     userInfo: value,
+    //     hasUserInfo: true,
+    //     logged: true,
+    //     username: value.nickName
+    //   })
+    // }
+    // check if the current user have already registered
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.cloud.callFunction({
+      name: 'authorized_user',
+      data: {
+      },
+      success: out => {
+        console.log('callfunction sucess');
+        console.log(out);
+        if (out.result.errCode == 0) {
+          if (out.result.data.registered) {
+            app.globalData.userData = out.result.data.userData;
+            console.log(out.errMsg);
+            this.setData({
+              gender: out.result.data.userData.gender,
+              avatarUrl: out.result.data.userData.avatarUrl,
+              userInfo: out.result.data.userData,
+              hasUserInfo: true,
+              logged: true,
+              username: out.result.data.userData.nickname
+            })
+          } else {
+            console.log(out.errMsg);
+          }
+        } else {
+          console.log(out.errMsg);
+        }
+      },
+      fail: out => {
+        console.log('call function failed')
+      },
+      complete: out => {
+        console.log('call function completed')
+        wx.hideLoading()
+      }
+    })
   },
 
-  logout() {
-    let that = this
-    wx.setStorageSync('userdata', null)
-    that.setData({
-      avatarUrl: './user-unlogin.png',
-      userInfo: null,
-      hasUserInfo: false,
-      logged: false,
-      username: '用户未登录'
-    })
-    wx.showToast({
-      title:'logged out',
-    })
-  },
+  // logout() {
+  //   let that = this
+  //   wx.setStorageSync('userdata', null)
+  //   that.setData({
+  //     avatarUrl: './user-unlogin.png',
+  //     userInfo: null,
+  //     hasUserInfo: false,
+  //     logged: false,
+  //     username: '用户未登录'
+  //   })
+  //   wx.showToast({
+  //     title:'logged out',
+  //   })
+  // },
 
   authorization() {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
@@ -58,13 +95,38 @@ Page({
         wx.showToast({
           title:'授权成功',
         })
-        wx.setStorageSync('userdata', res.userInfo)
+        //wx.setStorageSync('userdata', res.userInfo)
         this.setData({
+          gender: res.userInfo.gender,
           avatarUrl: res.userInfo.avatarUrl,
           userInfo: res.userInfo,
           hasUserInfo: true,
           logged: true,
           username: res.userInfo.nickName
+        })
+        //console.log(res.userInfo)
+        wx.cloud.callFunction({
+          name: 'sign_in',
+          data: {
+            avatarUrl: res.userInfo.avatarUrl,
+            nickname: res.userInfo.nickName,
+            gender: res.userInfo.gender
+          },
+          success: out => {
+            console.log('callfunction sucess');
+            console.log(out);
+            if (out.result.errCode == 0) {
+              app.globalData.userData = out.result.data;
+            } else {
+              console.log(out.errMsg);
+            }
+          },
+          fail: out => {
+            console.log('call function failed')
+          },
+          complete: out => {
+            console.log('call function completed')
+          }
         })
       }
     })
@@ -83,7 +145,17 @@ Page({
   //     })
   //   }
   // },
+  toCalendar: function() {
+    wx.navigateTo({
+      url: "../calendar/calendar",
+    })
+  },
 
+  toQuesetionnaire: function() {
+    wx.navigateTo({
+      url: "../questionnaire/questionnaire",
+    })
+  },
 
 
   onGetOpenid: function() {
