@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/mainpage/mainpage",
     "pages/questionnaire/questionnaire",
     "pages/calendar/calendar",
     "pages/userConsole/userConsole",
