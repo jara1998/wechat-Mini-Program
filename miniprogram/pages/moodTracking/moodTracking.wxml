@@ -1,0 +1,3 @@
+<view class="body">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec_line }}"></ec-canvas>
+</view>

@@ -1,0 +1,13 @@
+/* miniprogram/pages/moodTracking/moodTracking.wxss */
+
+ec-canvas {
+  width: 90%;
+  height: 600rpx;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}

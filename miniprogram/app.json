@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/mainpage/mainpage",
+    "pages/questionnaire/questionnaire",
     "pages/calendar/calendar",
+    "pages/questionnaire/questionnaire",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -13,8 +16,7 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room",
-    "pages/questionnaire/questionnaire"
+    "pages/im/room/room"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -22,6 +24,39 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "HIV adherence track",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#959494",
+    "selectedColor": "#1C6DCD",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/selected-emotion.png",
+        "iconPath": "images/emotion.png",
+        "pagePath": "pages/mainpage/mainpage",
+        "text": "情绪记录"
+      },
+      {
+        "selectedIconPath": "images/selected-med.png",
+        "iconPath": "images/med.png",
+        "pagePath": "pages/mainpage/mainpage",
+        "text": "服药记录"
+      },
+      {
+        "selectedIconPath": "images/selected-tracking.png",
+        "iconPath": "images/tracking.png",
+        "pagePath": "pages/mainpage/mainpage",
+        "text": "评估"
+      },
+      {
+        "selectedIconPath": "images/selected-profile2.png",
+        "iconPath": "images/profile.png",
+        "pagePath": "pages/mainpage/mainpage",
+        "text": "我的"
+      }
+    ],
+    "position": "bottom"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
