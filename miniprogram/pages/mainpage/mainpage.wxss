@@ -1,36 +1,23 @@
 .moledule {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: aquamarine;
+  background-color: rgb(250, 250, 250);
   position: relative;
+  display: flex;
+  justify-content: space-between;
   margin-top: 3.0rem;
   margin-bottom: 2.5rem;
   border-radius: .5rem;
   width: 90%;
-  transition: 250ms;
-}
-
-.moledule:hover {
-  transform: scale(1.03);
-}
-
-#moledule-one {
-  background-color: #8D92FF;
-}
-
-#moledule-two {
-  background-color: #72bffa;
-}
-
-#moledule-three {
-  background-color: #fc672d;
+  height: 10rem;
+  z-index: -1;
 }
 
 .content {
+  width: 96%;
+  height: 10rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .check-circle {
@@ -48,10 +35,20 @@
   margin-left: 10px;
 }
 
-.graph {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  height: 130px;
-  width: 130px;
+.background {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 97%;
+  height: auto;
+  z-index: 1;
+}
+
+#moledule-three {
+  background-color: #BDD6FF;
+}
+
+#moledule-three > .content {
+  height: 98%;
+  flex-direction: column;
 }
