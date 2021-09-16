@@ -8,8 +8,15 @@ function initChart(canvas, width, height) {
     height: height
   });
   canvas.setChart(chart);
-  // app.globalData.userData.med_date
-  // var date = new Date(app.globalData.userData.med_date[0])
+  const allDates = app.globalData.userData.med_date;
+  var perMonth = [0,0,0,0,0,0,0,0,0,0,0,0];
+  console.log(allDates)
+  for (var i = 0; i < allDates.length; i++) {
+    var date = new Date(allDates[i]);
+    var month = date.getMonth();
+    perMonth[month] = perMonth[month] + 1;
+  }
+  console.log(perMonth);
   //The official sample configuration is copied here
   var option = {
     title: {
@@ -17,7 +24,7 @@ function initChart(canvas, width, height) {
     },
     tooltip: {},
     xAxis: {
-      data: ["2月", "3月", "4月", "5月", "6月", "7月"]
+      data: [(currMonth(-5) + 1) +"月", (currMonth(-4) + 1) +"月", (currMonth(-3) + 1) +"月",(currMonth(-2) + 1) + "月",(currMonth(-1) + 1) + "月", (currMonth(0) + 1) +"月"]
     },
     yAxis: 
       [
@@ -29,37 +36,50 @@ function initChart(canvas, width, height) {
       type: 'bar',
       data: [
         {
-          value: 25,
-          itemStyle: { color: get_color(25, false) },
+          value: perMonth[currMonth(-5)],
+          itemStyle: { color: get_color(perMonth[currMonth(-5)], false) },
+          // value: 30,
+          // itemStyle: { color: get_color(30, false) },
         },
         {
-          value: 30,
-          itemStyle: { color: get_color(30, false) },
+          value: perMonth[currMonth(-4)],
+          itemStyle: { color: get_color(perMonth[currMonth(-4)], false) },
+          // value: 30,
+          // itemStyle: { color: get_color(30, false) },
         },
         {
-          value: 27,
-          itemStyle: { color: get_color(27, false) },
+          value: perMonth[currMonth(-3)],
+          itemStyle: { color: get_color(perMonth[currMonth(-3)], false) },
+          // value: 30,
+          // itemStyle: { color: get_color(30, false) },
         },
         {
-          value: 30,
-          itemStyle: { color: get_color(30, false) },
+          value: perMonth[currMonth(-2)],
+          itemStyle: { color: get_color(perMonth[currMonth(-2)], false) },
+          // value: 30,
+          // itemStyle: { color: get_color(30, false) },
         },
         {
-          value: 20,
-          itemStyle: { color: get_color(20, false) },
+          value: perMonth[currMonth(-1)],
+          itemStyle: { color: get_color(perMonth[currMonth(-1)], false) },
+          // value: 30,
+          // itemStyle: { color: get_color(30, false) },
         },
         {
-          value: 28,
+          value: perMonth[currMonth(0)],
           itemStyle: {
-            color: get_color(28, true),
+            color: get_color(perMonth[currMonth(0)], true),
           },
+          // value: 30,
+          // itemStyle: { color: get_color(30, false) },
+
           label: {
             show: true,
             position: 'top',
             textStyle: {
               color: '#979797'
             },
-            formatter: currMonthLabel(28)
+            formatter: currMonthLabel(perMonth[currMonth(0)])
           }
         }
       ],
@@ -70,12 +90,25 @@ function initChart(canvas, width, height) {
   return chart;
 }
 
+function currMonth(index) {
+  var today = new Date();
+  var month = today.getMonth()
+  month = month + index;
+  if (month < 0) {
+    month = 12 + month;
+  }
+  return month;
+}
+
 function currMonthLabel (value) {
   return value + "天";
 }
 
 function get_color(value, currentMonth) {
   if (currentMonth) {
+    if (value <= 20) {
+      return "#f2c94c"
+    }
     return '#00960F'
   }
   if (value <= 20) {

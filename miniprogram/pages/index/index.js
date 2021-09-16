@@ -157,6 +157,11 @@ Page({
     })
   },
 
+  toMedTracking: function() {
+    wx.navigateTo({
+      url: "../medTracking/medTracking",
+    })
+  },
 
   onGetOpenid: function() {
     // 调用云函数
