@@ -8,7 +8,8 @@ function initChart(canvas, width, height) {
     height: height
   });
   canvas.setChart(chart);
-
+  // app.globalData.userData.med_date
+  // var date = new Date(app.globalData.userData.med_date[0])
   //The official sample configuration is copied here
   var option = {
     title: {
