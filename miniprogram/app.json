@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/mainpage/mainpage",
-    "pages/questionnaire/questionnaire",
     "pages/calendar/calendar",
+    "pages/questionnaire/questionnaire",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
