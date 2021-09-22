@@ -1,0 +1,6 @@
+<!--pages/infoPage/infoPage.wxml-->
+<view class="background">
+  <view class="content">
+    <text class="title">联系专家</text>
+  </view>
+</view>

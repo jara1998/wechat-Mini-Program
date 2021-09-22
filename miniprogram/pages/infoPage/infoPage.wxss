@@ -1,0 +1,10 @@
+/* pages/infoPage/infoPage.wxss */
+.background {
+  background-color: #F6F6F6;
+}
+
+.content {
+  margin-top: 40px;
+  margin-left: 27px;
+  border-radius: 6px;
+}

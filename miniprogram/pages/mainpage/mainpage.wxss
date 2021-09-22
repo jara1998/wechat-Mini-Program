@@ -1,10 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .moledule {
   background-color: rgb(250, 250, 250);
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: 3.0rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
   border-radius: .5rem;
   width: 90%;
   height: 10rem;
@@ -51,4 +55,26 @@
 #moledule-three > .content {
   height: 98%;
   flex-direction: column;
+}
+
+#info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#info-img {
+  height: 47px;
+  width: 49px;
+  margin-right: 3%;
+  margin-top: 3%;
+  margin-bottom: 8px;
+}
+
+#text {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 60px;
+  margin-bottom: 15px;
 }
