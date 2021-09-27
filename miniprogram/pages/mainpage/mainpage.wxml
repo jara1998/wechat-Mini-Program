@@ -1,6 +1,6 @@
 <view class="container">
   <view id="info">
-    <image id="info-img" src="../../images/info.png"></image>
+    <image id="info-img" bindtap="toInfoPage" src="../../images/info.png"></image>
   </view>
   <view id="text">必做模块</view>
   <view class="moledule" id="moledule-one">

@@ -3,8 +3,23 @@
   background-color: #F6F6F6;
 }
 
+
+
 .content {
+  background-color: #ffffff;
   margin-top: 40px;
   margin-left: 27px;
   border-radius: 6px;
+}
+
+.content > .title {
+  margin-left: 10px;
+}
+
+.content > .text {
+  margin-left: 15px;
+}
+
+.title {
+  font-size: 20px;
 }
