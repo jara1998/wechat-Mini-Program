@@ -41,12 +41,14 @@ Page({
 
         let calender_size = (app.globalData.userData.med_date == undefined) ? 0 : app.globalData.userData.med_date.length;
         for(let i = 0; i < calender_size; i++) {
-            demo5_days_style.push({
-                month: 'current',
-                day: new Date(app.globalData.userData.med_date[i]).getDate(),
-                color: 'white',
-                background: '#006400',
-            });
+            if(new Date(app.globalData.userData.med_date[i]).getMonth()+1 === this.data.month) {
+                demo5_days_style.push({
+                    month: 'current',
+                    day: new Date(app.globalData.userData.med_date[i]).getDate(),
+                    color: 'white',
+                    background: '#006400',
+                });
+            }
         }
         
         var last_med_date = new Date(app.globalData.userData.med_date[0]);
