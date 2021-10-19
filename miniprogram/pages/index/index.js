@@ -68,6 +68,7 @@ Page({
       complete: out => {
         console.log('call function completed')
         wx.hideLoading()
+        console.log(app.globalData.userData)
       }
     })
   },
