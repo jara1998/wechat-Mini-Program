@@ -158,11 +158,6 @@ Page({
     })
   },
 
-  toMain: function() {
-    wx.switchTab({
-      url: '../mainpage/mainpage',
-    })
-  },
 
   onGetOpenid: function() {
     // 调用云函数

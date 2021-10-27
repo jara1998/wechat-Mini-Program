@@ -1,9 +1,0 @@
-<cover-view class="tab">
-  <block wx:for="{{list}}" wx:key="*this">
-    <cover-view class="button" wx:key="index" data-index="{{index}}" bindtap="tabChange">
-      <view class="dot" wx:if="{{item.showRedDot}}"></view>
-      <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}" class="icon"></cover-image>
-      <cover-view class="title" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
-    </cover-view>
-  </block>
-</cover-view>
