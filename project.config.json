@@ -35,6 +35,12 @@
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true,
+<<<<<<< chuteng
+=======
+    "disableUseStrict": false,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+>>>>>>> main
     "minifyWXML": true
   },
   "appid": "wxce2e39d26aad783a",
