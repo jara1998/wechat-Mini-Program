@@ -16,40 +16,38 @@ App({
             traceUser: true,
           })
         }
-      }
-  
-
-      var that = this
-      wx.showLoading({
-        title: '加载中',
-      })
-      wx.cloud.callFunction({
-        name: 'authorized_user',
-        data: {
-        },
-        success: out => {
-          console.log('callfunction sucess');
-          console.log(out);
-          if (out.result.errCode == 0) {
-            if (out.result.data.registered) {
-              that.globalData.userData = out.result.data.userData;
-              console.log(out.errMsg);
+        var that = this
+        wx.showLoading({
+          title: '加载中',
+        }),
+        wx.cloud.callFunction({
+          name: 'authorized_user',
+          data: {
+          },
+          success: out => {
+            console.log('callfunction sucess');
+            console.log(out);
+            if (out.result.errCode == 0) {
+              if (out.result.data.registered) {
+                that.globalData.userData = out.result.data.userData;
+                console.log(out.errMsg);
+              } else {
+                console.log(out.errMsg);
+              }
             } else {
               console.log(out.errMsg);
             }
-          } else {
-            console.log(out.errMsg);
+          },
+          fail: out => {
+            console.log('call function failed')
+          },
+          complete: out => {
+            console.log('call function completed')
+            wx.hideLoading()
+            console.log(this.globalData.userData)
           }
-        },
-        fail: out => {
-          console.log('call function failed')
-        },
-        complete: out => {
-          console.log('call function completed')
-          wx.hideLoading()
-          console.log(this.globalData.userData)
-        }
-      })
+        })
+
       }
-    }
+      
 })

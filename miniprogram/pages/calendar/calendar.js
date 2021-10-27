@@ -24,6 +24,13 @@ Page({
         var tabList = that.getTabBar().data.list
         setInterval(function() {
             var today = new Date();
+            if (app.globalData.userData.med_date.length == 0) {
+                tabList[1].showRedDot = true;
+                that.getTabBar().setData({
+                    list:tabList
+                })
+                return;
+            }
             var lastDate = new Date(app.globalData.userData.med_date[0])
             if (today.toDateString() != lastDate.toDateString()) {
                 tabList[1].showRedDot = true;
