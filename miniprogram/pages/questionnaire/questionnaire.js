@@ -24,29 +24,6 @@ Page({
     is_completed: false
   },
 
-  onShow: function() {
-  // displaying red dot on calendar icon
-  var today = new Date();
-  var tabList = this.getTabBar().data.list
-  var lastDate = new Date(app.globalData.userData.med_date[0])
-
-  if (today.toDateString() != lastDate.toDateString()) {
-      tabList[1].showRedDot = true;
-  } else {
-      tabList[1].showRedDot = false;
-  }
-
-  this.getTabBar().setData({
-      list:tabList
-  })
-
-    if (typeof this.getTabBar === "function" && this.getTabBar()) {
-        this.getTabBar().setData({
-            selected: 0
-        })
-    }
-},
-
   onLoad: function (options) {
     // The most recent week during which the questionaire was completed
     var last_questionare_week = app.globalData.userData.mood_track.mood_date[0];

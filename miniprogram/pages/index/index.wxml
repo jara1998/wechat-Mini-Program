@@ -50,10 +50,6 @@
     <button bindtap="toQuesetionnaire">go to Quesetionnaire</button>
   </view>
 
-  <view class="uploader">
-    <button bindtap="toMain">go to Main Page</button>
-  </view>
-
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 
