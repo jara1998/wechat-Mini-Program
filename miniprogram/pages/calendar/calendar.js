@@ -18,6 +18,30 @@ Page({
         demo5_days_style: [],           // for styling of the page
     },
 
+    onShow: function() {
+        // displaying red dot on calendar icon
+        var that = this
+        var tabList = that.getTabBar().data.list
+        setInterval(function() {
+            var today = new Date();
+            var lastDate = new Date(app.globalData.userData.med_date[0])
+            if (today.toDateString() != lastDate.toDateString()) {
+                tabList[1].showRedDot = true;
+            } else {
+                tabList[1].showRedDot = false;
+            }
+            that.getTabBar().setData({
+                list:tabList
+            })
+        }, 1000)
+
+        if (typeof that.getTabBar === "function" && that.getTabBar()) {
+            that.getTabBar().setData({
+                selected: 1,
+            })
+        }
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
