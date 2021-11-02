@@ -8,12 +8,15 @@ assignees: ''
 ---
 
 **Describe the bug**
+
 A clear and concise description of what the bug is.
 
 **Expected behavior**
+
 A clear and concise description of what you expected to happen.
 
 **To Reproduce**
+
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
@@ -22,12 +25,15 @@ Steps to reproduce the behavior:
 ......
 
 **Possible causes of the bugs**
+
 (leave it blank if you don't know)
 ... 
 
 **Screenshots**
+
 If applicable, add screenshots to help explain your problem.
 
 
 **Additional context**
+
 Add any other context about the problem here.
