@@ -1,5 +1,6 @@
 //app.js
 App({
+
       globalData: {
         userData: {}
       },
@@ -47,7 +48,6 @@ App({
         //     console.log(this.globalData.userData)
         //   }
         // })
-
       }
       
 })
