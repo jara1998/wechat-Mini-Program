@@ -19,16 +19,10 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-<<<<<<< HEAD
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
     "useApiHostProcess": true,
-=======
-    "useMultiFrameRuntime": false,
-    "useApiHook": false,
-    "useApiHostProcess": false,
->>>>>>> 4296e91... test
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -41,15 +35,9 @@
     "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
-<<<<<<< HEAD
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
     "minifyWXML": true
-=======
-    "minifyWXML": true,
-    "showES6CompileOption": false,
-    "useCompilerPlugins": false
->>>>>>> 4296e91... test
   },
   "appid": "wxce2e39d26aad783a",
   "projectname": "miniprogram-2",
