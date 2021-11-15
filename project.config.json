@@ -19,14 +19,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
     "lazyloadPlaceholderEnable": false,
-=======
->>>>>>> aa61665... staged commit
-=======
-    "lazyloadPlaceholderEnable": false,
->>>>>>> 2ec0596... staged
     "useMultiFrameRuntime": true,
     "useApiHook": true,
     "useApiHostProcess": true,
@@ -43,8 +36,7 @@
     "minifyWXSS": true,
     "disableUseStrict": false,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false,
-    "minifyWXML": true
+    "useCompilerPlugins": false
   },
   "appid": "wxce2e39d26aad783a",
   "projectname": "miniprogram-2",
