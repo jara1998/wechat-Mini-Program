@@ -21,25 +21,25 @@ Page({
    */
   onShow: function() {
     // displaying red dot on calendar icon
-    var today = new Date();
-    var tabList = this.getTabBar().data.list;
-    console.log(app.globalData.userData);
-    console.log("look above");
-    if (app.globalData.userData.med_date.length == 0) {
-      tabList[1].showRedDot = true;
-
+    var medDate = app.globalData.userData.med_date
+    var tabList = this.getTabBar().data.list
+    if (medDate.length != 0) {
+        var today = new Date()
+        var lastDate = new Date(app.globalData.userData.med_date[0])
+    
+        if (today.toDateString() != lastDate.toDateString()) {
+          tabList[1].showRedDot = true
+        } else {
+          tabList[1].showRedDot = false
+        }
     } else {
-      var lastDate = new Date(app.globalData.userData.med_date[0])
-      if (today.toDateString() != lastDate.toDateString()) {
-        tabList[1].showRedDot = true;
-      } else {
-        tabList[1].showRedDot = false;
-      }
+      tabList[1].showRedDot = true
     }
-      this.getTabBar().setData({
-        list:tabList
-      })
+    this.getTabBar().setData({
+      list:tabList
+    })
 
+    // changes color when selected
     if (typeof this.getTabBar === "function" && this.getTabBar()) {
         this.getTabBar().setData({
             selected: 3

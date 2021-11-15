@@ -1,26 +1,26 @@
 <view class="container">
+  <view id="info">
+    <image id="info-img" bindtap="toInfoPage" src="../../images/info.png"></image>
+  </view>
+  <view id="text">必做模块</view>
   <view class="moledule" id="moledule-one">
     <view class="content">
-     <view class="check-circle"></view>
-     <text class="title">消极思想，情绪和行为</text>
-     <text class="length">5-10min</text>
+      <text class="title">消极思想，情绪和行为</text>
+      <view class="check-circle"></view>
     </view>
-    <image src="../../images/windy.png" class="graph">picture</image>
+    <image mode="widthFix" class="background" src="../../images/module_1.png"></image>
   </view>
   <view class="moledule" id="moledule-two">
     <view class="content">
-     <view class="check-circle"></view>
-     <text class="title">选择有价值的生活</text>
-     <text class="length">5-10min</text>
+      <text class="title">选择有价值的生活</text>
+      <view class="check-circle"></view>
     </view>
-    <image src="../../images/snow.png" class="graph">picture</image>
+    <image mode="widthFix" class="background"  src="../../images/module_2.png" style="width: 669rpx; height: 336rpx; display: block; box-sizing: border-box; left: 13rpx; top: 0rpx"></image>
   </view>
-  <view class="moledule" id="moledule-three">
+  <view class="moledule" id="moledule-three" style="width: 629rpx; height: 290rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
     <view class="content">
-     <view class="check-circle"></view>
-     <text class="title">选做模块</text>
-     <text class="length">5-45min</text>
+      <text class="title">选做模块</text>
+      <text> 5-45min </text>
     </view>
-    <image src="../../images/evening.png" class="graph">picture</image>
   </view>
 </view>
