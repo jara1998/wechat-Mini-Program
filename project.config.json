@@ -19,7 +19,10 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
+<<<<<<< HEAD
     "lazyloadPlaceholderEnable": false,
+=======
+>>>>>>> aa61665... staged commit
     "useMultiFrameRuntime": true,
     "useApiHook": true,
     "useApiHostProcess": true,
