@@ -1,56 +1,87 @@
 {
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide",
-          "query": ""
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "id": 1,
-          "name": "pages/charts/charts",
-          "pathName": "pages/charts/charts",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "id": -1,
-          "name": "pages/medTracking/medTracking",
-          "pathName": "pages/medTracking/medTracking",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "id": 3,
-          "name": "pages/moodTracking/moodTracking",
-          "pathName": "pages/moodTracking/moodTracking",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/questionnaire/questionnaire",
-          "pathName": "pages/questionnaire/questionnaire",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mainpage/mainpage",
-          "pathName": "pages/mainpage/mainpage",
-          "query": "",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "id": 1,
+                    "name": "pages/charts/charts",
+                    "pathName": "pages/charts/charts",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "pages/medTracking/medTracking",
+                    "pathName": "pages/medTracking/medTracking",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 3,
+                    "name": "pages/moodTracking/moodTracking",
+                    "pathName": "pages/moodTracking/moodTracking",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/questionnaire/questionnaire",
+                    "pathName": "pages/questionnaire/questionnaire",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mainpage/mainpage",
+                    "pathName": "pages/mainpage/mainpage",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/module1/module1-main",
+                    "pathName": "pages/module1/module1-main",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/module2/module2-main",
+                    "pathName": "pages/module2/module2-main",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/moduleStartPage/moduleStartPage",
+                    "pathName": "pages/moduleStartPage/moduleStartPage",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/calendar/calendar",
+                    "pathName": "pages/calendar/calendar",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

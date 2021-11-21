@@ -1,0 +1,45 @@
+<view class="main">
+    <view class="box">
+        <text class="title">title</text>
+        <text class="title">subtitle</text>
+    </view>
+    <view class="container">
+        <button bindtap="toPrevPage">prev</button>
+        <button bindtap="toNextPage">next</button>
+    </view>
+</view>
+
+<view wx:if="{{ pageNum == 1 }}">
+    <text>1</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>
+
+<view wx:elif="{{ pageNum == 2 }}">
+    <text>2</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>
+
+<view wx:elif="{{ pageNum == 3 }}">
+    <text>3</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>
+
+<view wx:elif="{{ pageNum == 4 }}">
+    <text>4</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>
+
+<view wx:elif="{{ pageNum == 5 }}">
+    <text>5</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>
+
+<view wx:elif="{{ pageNum == 6 }}">
+    <text>6</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>
+
+<view wx:elif="{{ pageNum == 7 }}">
+    <text>7</text>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor orci, molestie vitae lacus in, congue aliquet dui. Sed iaculis mauris a neque porttitor maximus. Sed odio elit, molestie ac rutrum sed, pharetra eget dui. Nullam a orci tempus, imperdiet leo vel, aliquam mi. Nullam ornare consequat rhoncus. Pellentesque vitae lacinia diam, eget dapibus sem. Praesent consequat augue finibus nibh tincidunt vestibulum. Quisque at nibh lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pharetra fermentum rutrum.</text>
+</view>

@@ -1,0 +1,10 @@
+<view>
+  <progress percent="20" show-info stroke-width="3"/>
+</view>
+<button bindtap="toModule1">module1</button>
+<button bindtap="toModule2">module2</button>
+<button bindtap="toModule3">module3</button>
+<button bindtap="toModule4">module4</button>
+<button bindtap="toModule5">module5</button>
+<button bindtap="toModule6">module6</button>
+<button bindtap="test">Some page</button>
