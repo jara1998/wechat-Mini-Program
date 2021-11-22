@@ -43,7 +43,7 @@ exports.main = async (event, context) => {
   .get()
   .then(res => {
     userData = res.data[0].page_track;
-    result.data = res.data[0]
+    result.data = {page_track: userData};
   });
   if (!userData[module_index].includes(page_int)) {
     userData[module_index].push(page_int);
@@ -60,8 +60,10 @@ exports.main = async (event, context) => {
       console.log("completed page successfully");
     })
     result.data.page_track = userData;
+    result.errMsg = "completed page successfully"
   } else {
     console.log("page already completed")
+    result.errMsg = "page already completed"
   }
   return result;
 }

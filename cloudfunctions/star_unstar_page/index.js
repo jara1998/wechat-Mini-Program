@@ -45,8 +45,10 @@ exports.main = async (event, context) => {
   const index = userData.indexOf(page_int);
   if (index > -1) {  // remove the page from array
     userData.splice(index, 1);
+    result.errMsg = "unstarred page successfully"
   } else {  // add the page to array
     userData.push(page_int);
+    result.errMsg = "starred page successfully"
   }
   await db.collection("main_db")
   .where({
@@ -60,6 +62,6 @@ exports.main = async (event, context) => {
   .then(res => {
     console.log("starred/unstarred page successfully");
   })
-  result.data.starred_pages = userData;
+  result.data = {starred_pages: userData};
   return result;
 }
