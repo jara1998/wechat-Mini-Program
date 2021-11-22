@@ -40,6 +40,7 @@ exports.main = async (event, context) => {
   .get()
   .then(res => {
     userData = res.data[0].starred_pages;
+    result.data = res.data[0];
   });
   const index = userData.indexOf(page_int);
   if (index > -1) {  // remove the page from array
@@ -58,7 +59,7 @@ exports.main = async (event, context) => {
   })
   .then(res => {
     console.log("starred/unstarred page successfully");
-    console.log(res);
   })
-
+  result.data.starred_pages = userData;
+  return result;
 }
