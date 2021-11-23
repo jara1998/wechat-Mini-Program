@@ -54,6 +54,10 @@
     <button bindtap="toMedTracking">go to MedTracking</button>
   </view>
 
+  <view class="uploader">
+    <button bindtap="toMoodTracking">go to MoodTracking</button>
+  </view>
+
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 

@@ -163,6 +163,14 @@ Page({
     })
   },
 
+  toMoodTracking: function() {
+    wx.navigateTo({
+      url: "../moodTracking/moodTracking",
+    })
+  },
+
+  
+
   onGetOpenid: function() {
     // 调用云函数
     wx.cloud.callFunction({
