@@ -43,7 +43,7 @@ exports.main = async (event, context) => {
   .get()
   .then(res => {
     userData = res.data[0].page_track;
-    result.data = {page_track: userData};
+    result.data = res.data[0];
   });
   if (!userData[module_index].includes(page_int)) {
     userData[module_index].push(page_int);

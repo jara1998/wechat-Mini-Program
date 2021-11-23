@@ -62,6 +62,6 @@ exports.main = async (event, context) => {
   .then(res => {
     console.log("starred/unstarred page successfully");
   })
-  result.data = {starred_pages: userData};
+  result.data.starred_pages = userData;
   return result;
 }
