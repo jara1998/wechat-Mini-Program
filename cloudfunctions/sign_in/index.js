@@ -50,6 +50,9 @@ exports.main = async (event, context) => {
         mood_date: [-1,-1,-1,-1],
         mood_score: [-1,-1,-1,-1]
       },
+      total_pages: [30,30,30,30,30,30], // need to know exact page count
+      page_track: [[],[],[],[],[],[]],
+      starred_pages: [],
       med_date: []
     };
     console.log(to_add_data);

@@ -34,9 +34,7 @@
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true,
-    "disableUseStrict": false,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false,
     "minifyWXML": true
   },
   "appid": "wxce2e39d26aad783a",
