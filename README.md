@@ -1,4 +1,4 @@
-This Wechat Mini App is for mHealth interventions, increasing treatment engagement and medication adherence of newly diagnosed HIV patients.
+This Wechat Applet is for mHealth interventions, increasing treatment engagement and medication adherence of newly diagnosed HIV patients.
 
 Main Functionalites: 
 
