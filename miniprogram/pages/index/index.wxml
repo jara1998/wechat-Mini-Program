@@ -50,9 +50,17 @@
     <button bindtap="toQuesetionnaire">go to Quesetionnaire</button>
   </view>
 
+  <view class="uploader">
+    <button bindtap="to_new_mood_tracking">go to new Questionnaire</button>
+  </view>
+
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 
+  </view>
+
+  <view class="uploader">
+    <button bindtap="call_complete_page">test button</button>
   </view>
   <!-- <view class="uploader" wx:else>
     <button  bindtap="logout" style="position: relative; left: -29rpx; top: 0rpx">Logout</button> 

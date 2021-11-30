@@ -1,0 +1,27 @@
+<view class="page-body">
+  <view class="title">
+  <text>情绪评估</text>
+  </view>
+
+  <view class="subtitle">
+    <text>在过去的七天，您受以下问题困扰的频率如何?</text>
+  </view>
+
+  <view class="page-section">
+    <view class="questionnaire_box">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="true"/>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+</view>
+
+<view class="next_prev_button_box"> 
+    <text class="button_text" decode="true">&lt;</text>
+    <text class="button_text" decode="true" >&gt;</text>
+  </view>

@@ -158,6 +158,39 @@ Page({
     })
   },
 
+  to_new_mood_tracking: function() {
+    wx.navigateTo({
+      url: "../new_mood_tracking/new_mood_tracking",
+    })
+  },
+
+  call_complete_page: function() {
+    wx.cloud.callFunction({
+      name: 'complete_page',
+      data: {
+        module_num: 1,
+        task_num: 3,
+        page_num: 2
+      },
+      success: out => {
+        console.log('callfunction sucess');
+        console.log(out);
+        if (out.result.errCode == 0) {
+          console.log("call CP func sucess")
+          console.log(out.result)
+        } else {
+          console.log(out.errMsg);
+        }
+      },
+      fail: out => {
+        console.log('call CP function failed')
+      },
+      complete: out => {
+        console.log('call CP function completed')
+      }
+    })
+  },
+
 
   onGetOpenid: function() {
     // 调用云函数

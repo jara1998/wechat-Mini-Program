@@ -1,0 +1,111 @@
+/* pages/new_mood_tracking/new_mood_tracking.wxss */
+/* page{
+  height:100%
+} */
+
+.next_prev_button_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin-left: 10%; */
+  bottom: 50px;
+  margin: 30px;
+  position: fixed;
+}
+
+.button_text {
+  color: rgb(255, 255, 255);
+  background-color: rgb(37, 83, 184);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.circle_button {
+  display: flex;
+  border: 0 solid #ffffff;
+  border-radius: 500px;
+  box-shadow: 4px 1px 1px #cccccc;
+  background-color: rgb(53, 74, 194);
+}
+
+.questionnaire_box{
+  display:flex;                
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;  
+  text-align: center；
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 160px;
+}
+
+.subtitle {
+  opacity: 50%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  margin-left: 36px;
+}
+
+.question-set {
+  margin: 0rpx 10rpx 0rpx 10rpx;
+}
+
+.radio-set {
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+.radio-label {
+  flex-grow: 1;
+}
+
+.radio {
+  transform: scale(0.8);
+  position: relative;
+  left: 28px;
+}
+
+.hline {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.vline {
+  width: 1px;
+  height: 5px;
+  background-color: black;
+  position: relative;
+  left: 40px;
+}
+
+.option {
+  font-size: small;
+  position: relative;
+  left: 14px;
+}
+
+.submit-button {
+  position: relative;
+  left: -114px
+}
+
+.button-submit {
+  background-color: #1AAD19;
+  opacity: 0.5;
+}
+

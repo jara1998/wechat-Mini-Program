@@ -23,7 +23,7 @@ exports.main = async (event, context) => {
 
   // check database
   const db = cloud.database();
-  var user;
+  var userData;
   await db.collection("main_db")
   .where({
     openid: wxContext.OPENID
@@ -31,11 +31,11 @@ exports.main = async (event, context) => {
   .get()
   .then(res => {
     console.log("sucessfully check the database for user information");
-    user = res.data[0];
+    userData = res.data[0];
   });
 
   // check if the user had already registered
-  if (user == undefined) {
+  if (userData == undefined) {
     // build a new record
     to_add_data = {
       nickname: event.nickname,
@@ -92,12 +92,12 @@ exports.main = async (event, context) => {
   .get()
   .then(res => {
     console.log("Got newest userinfo from database");
-    user = res.data[0];
+    userData = res.data[0];
   });
   
   var result = {};
   result.errCode = 0;
   result.errMsg = 'successfully return userinformation';
-  result.data = user;
+  result.data = userData;
   return result;
 }
