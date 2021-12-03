@@ -4,7 +4,28 @@
     <view class="title">联系专家</view>
     <view class="text">
       <view>上海心理原著电话：201-55369173</view>
-      <view>上海精神卫生中心微信公众号信息</view>
+      <view>上海精神卫生中心微信公众号信息:</view>
+      <view>名称：上海精神卫生中心</view>
+      <view>服务：预约服务，医院内部智能导航，院内专家，等。</view>
+      <view id="if">如果你是大学生，请到您所在的大学心理咨询中心寻求帮助。如果您所在的大学不在以下列表中，请联系您的辅导员询问校内心理咨询资源</view>
+      <view class="sub_title">上海交通大学心理咨询中心</view>
+      <view>网站：</view>
+      <view>http://www.xinqing/sjtu.edu.cn/</view>
+      <view>服务：个体咨询，心理测试，团体咨询。</view>
+      <view class="sub_title">上海财经大学</view>
+      <view>网站</view>
+      <view>http://xsc.shufe.edu.cn/20/86/c5428a139398/page/html</view>
+      <view>联系方式：xlzx@mail.sufe.edu.cn；</view>
+      <view>021-65904073</view>
+      <view class="sub_title">复旦大学</view>
+      <view>网站</view>
+      <view>http://www.caps.fudan.edu.cn/</view>
+      <view>联系方式：65643339</view>
+      <view class="sub_title">同济大学</view>
+      <view>网站：</view>
+      <view>https://railway.tongji.edu.cn/4649/list/html</view>
+      <view>联系方式：021-65983723（四平校区）；</view>
+      <view>021-69589851（嘉定校区）</view>
     </view>
   </view>
 </view>
