@@ -19,7 +19,7 @@ Component({
       {
         "showRedDot": false,
         "selectedIconPath": "../images/selected-emotion.png",
-        "iconPath": "../images/emotion.png",
+        "iconPath": "../images/Group.png",
         "pagePath": "/pages/questionnaire/questionnaire",
         "text": "情绪追踪"
       },
