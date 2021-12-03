@@ -36,22 +36,23 @@ Page({
             tabList[1].showRedDot = true
         }
 
-        // displaying red dot on moodtracking icon
+         // displaying red dot on moodtracking icon
         var last_questionare_week = app.globalData.userData.mood_track.mood_date[0];
+        var currDate = new Date();
+        var janOne = new Date(currDate.getFullYear(),0,1);
+        var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
+        var curWeekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
+        console.log(curWeekNum);
         if (last_questionare_week == -1) {
             tabList[0].showRedDot = true
         } else {
-            var currDate = new Date();
-            var janOne = new Date(currDate.getFullYear(),0,1);
-            var dayNum = Math.floor((currDate - janOne) / (24 * 60 * 60 * 1000));
-            var curWeekNum = Math.ceil((currDate.getDay() + 1 + dayNum) / 7);
             if (curWeekNum == last_questionare_week) {
-            tabList.showRedDot = false;
+            tabList[0].showRedDot = false;
             } else {
-            tabList.showRedDot = true;
+            tabList[0].showRedDot = true;
             }
         }
-        
+
         this.getTabBar().setData({
             list:tabList
         })
