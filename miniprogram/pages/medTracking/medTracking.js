@@ -2,6 +2,56 @@ import * as echarts from '../../ec-canvas/echarts';
 
 const app = getApp();
 
+function getSunday(d, week) {
+  d = new Date(d);
+  d.setDate(d.getDate() - (7 * week));
+  var day = d.getDay(),
+    diff = d.getDate() - day - 1; // adjust when day is sunday
+    console.log(d);
+
+    d.setDate(diff);
+    var month = d.getUTCMonth() + 1; //months from 1-12
+    var day = d.getUTCDate();
+  return month + "." + day;
+}
+
+function getSaturday(d, week) {
+  d = new Date(d);
+  d.setDate(d.getDate() - (7 * week));
+  var day = d.getDay(),
+      diff = d.getDate() - day + 5; // adjust when day is sunday
+      d.setDate(diff);
+      var month = d.getUTCMonth() + 1; //months from 1-12
+      var day = d.getUTCDate();
+    return month + "." + day;
+}
+
+function getWeek(currentDay) {
+  var d = new Date(d);
+  var week = -1;
+  while (currentDay < d) {
+    d.setDate(d.getDate() - 7);
+    var day = d.getDay(),
+    diff = d.getDate() - day + 5; // adjust when day is sunday
+    d.setDate(diff);
+    week++;
+  }
+  return week;
+}
+
+function makeArrays(weeks, scores) {
+  const allDates = app.globalData.userData.med_date;
+  var today = new Date();
+  for (var i = 24; i >= 0; i--) {
+    weeks[i] = getSunday(today, i) + "-" + getSaturday(today, i);
+    scores[i] = 0;
+  }
+  for (var i = 0; i < allDates.length; i++) {
+    var date = new Date(allDates[i]);
+    scores[getWeek(date)]++;
+  }
+}
+
 function initChart(canvas, width, height) {
   const chart = echarts.init(canvas, null, {
     width: width,

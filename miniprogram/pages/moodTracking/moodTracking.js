@@ -39,6 +39,7 @@ function reverseArr(input) {
   return ret;
 }
 
+
 function initLine(canvas, width, height) {
   console.log("asdf");
   const chart = echarts.init(canvas, null, {
@@ -99,7 +100,30 @@ function initLine(canvas, width, height) {
     tooltip: {
       trigger: 'axis',
       triggerOn: 'click',
-      formatter: 'Total Mood Score : {c}'
+      confine: true,
+      formatter: function(params) {
+
+        var score = params[0].value;
+        if (typeof score == 'undefined') {
+          return null;
+        }
+        var name = params[0].name;
+        var rating;
+        console.log(score);
+        if (score < 5) {
+          rating = "Minimal Depression";
+        } else if (score >= 5 && score < 10) {
+          rating = "Mild Depression";
+        } else if (score >= 10 && score < 15) {
+          rating = "Moderate Depression";
+        } else if (score >= 15 && score < 20) {
+          rating = "Moderately Sever Depression";
+        } else {
+          rating = "Sever Depression";
+        }
+
+        return "Total Mood Score: " + score + "\nRating: " + rating + "\n" + name;
+      }
     },
     xAxis: {
       type: 'category',
