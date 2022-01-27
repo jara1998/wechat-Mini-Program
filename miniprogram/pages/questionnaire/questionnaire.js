@@ -2,26 +2,24 @@ const app = getApp();
 
 Page({
   data: {
-    questions: [{option: 0, value: '对任何事情都提不起兴趣'}, 
-                {option: 1, value: '感觉沮丧，忧郁，或绝望 '}, 
-                {option: 2, value: '无法入睡，无法保持睡眠，或睡眠时间过多'}, 
-                {option: 3, value: '感觉乏力和没有精力'}, 
-                {option: 4, value: '没有胃口或过量进食'}, 
-                {option: 5, value: '对自己感到不满(感觉自己是个失败者)，或感觉让自己或家人失望'},
-                {option: 6, value: '无法集中注意力，比如在读报或看电视时'},
-                {option: 7, value: '行动或说话缓慢，以至于引起旁人注意。相反，或因为烦躁而坐立不安'},
-                {option: 8, value: '有想要死亡或以某种途径伤害自己的想法'},
+    questions: [{option: 0, value: '没有兴趣或不乐意做事情'}, 
+                {option: 1, value: '感到情绪低落，沮丧或绝望'}, 
+                {option: 2, value: '入睡或保持睡眠有困难'}, 
+                {option: 3, value: '感到疲劳或没有精神'}, 
+                {option: 4, value: '胃口不好或饮食过度'}, 
+                {option: 5, value: '对自己感到难过；感觉自己是个失败者或让自己或家人失望'},
               ],
 
-    options: [{option: 0, value: '完全没有'},
-              {option: 1, value: '有过几天'},
-              {option: 2, value: '超过一半'},
-              {option: 3, value: '几乎每天'}
+    options: [{option: 0, value: '很少或没有时间（不到1天）'},
+              {option: 1, value: '一些或一点时间（1-2天）'},
+              {option: 2, value: '偶尔或适量时间（3-4天）'},
+              {option: 3, value: '大部分或所有时间（5-7天）'}
             ],
             
     answers: [-1, -1, -1, -1, -1, -1],
     highestScore: 18.0,  // 6 * 3
-    is_completed: false
+    is_completed: false,
+    pageNum: 0
   },
 
   onLoad: function (options) {
