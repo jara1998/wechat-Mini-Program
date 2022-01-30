@@ -52,6 +52,7 @@ function makeArrays(weeks, scores) {
   }
 }
 
+
 function initChart(canvas, width, height) {
   const chart = echarts.init(canvas, null, {
     width: width,
@@ -166,6 +167,30 @@ function get_color(value, currentMonth) {
   }
   return '#B8DDC8'
 }
+
+function data_object(userInfo) {
+  const allDates = app.globalData.userData.med_date;
+  const total_days = curr_day - app.globalData.userData.reg_time;
+  var perMonth = [0,0,0,0,0,0,0,0,0,0,0,0];
+  var sum = 0;
+  console.log(allDates)
+  for (var i = 0; i < allDates.length; i++) {
+    var date = new Date(allDates[i]);
+    var month = date.getMonth();
+    perMonth[month] = perMonth[month] + 1;
+    sum++;
+  }
+
+
+  var person = {
+    curr: perMonth[0],
+    comp_prev: perMonth[0] - perMonth[1],
+    avg: sum/total_days,
+  };
+
+  return person;
+}
+
 Page({
 
   /**
@@ -174,18 +199,18 @@ Page({
   data: {
     ec: {
       onInit: initChart
-    }
+    },
 
+    userInfo: {
+      onInit: data_object
+    },
 
   },
 
   /**
        * Life cycle function-monitor page loading
    */
-  onLoad: function (options) {
-    this.oneComponent = this.selectComponent('#mychart-dom-bar');
-    this.getOneOption();
-  },
+
   /**
        * Life cycle function-monitor page loading
    */
