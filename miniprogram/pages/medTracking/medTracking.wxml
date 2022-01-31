@@ -2,7 +2,7 @@
 
 <div class='parent'>
   <div class="stats">本周服药天数: </div>
-  <div class="userInfo">{{userData.curr}} 天</div>
+  <div class="userInfo"> {{userData.curr}} 天</div>
 </div>
 
 <div class='parent'>

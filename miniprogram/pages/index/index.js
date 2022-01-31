@@ -11,7 +11,9 @@ Page({
     takeSession: false,
     requestResult: '',
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl'), // 如需尝试获取用户信息可改为false
+    userData: '',
+    medData: '',
   },
 
   onLoad: function() {
@@ -158,9 +160,7 @@ Page({
   },
 
   toMedTracking: function() {
-    wx.navigateTo({
-      url: "../medTracking/medTracking",
-    })
+    this.data_object()
   },
 
   toMoodTracking: function() {
@@ -169,6 +169,31 @@ Page({
     })
   },
 
+  data_object: function() {
+
+    const allDates = app.globalData.userData.med_date;
+    var curr_day = new Date();
+    var register_day = new Date(app.globalData.userData.reg_time);
+    const total_days = (curr_day.getTime() - register_day.getTime()) / (1000 * 3600 * 24);
+
+    var perMonth = [0,0,0,0,0,0,0,0,0,0,0,0];
+    var sum = 0;
+    for (var i = 0; i < allDates.length; i++) {
+      var date = new Date(allDates[i]);
+      var month = date.getMonth();
+      perMonth[month] = perMonth[month] + 1;
+      sum++;
+    }
+    var currMonth = curr_day.getMonth();
+    var prevMonth = currMonth == 0 ? 11 : currMonth - 1;
+    var currprev = perMonth[currMonth] - perMonth[prevMonth];
+
+    this.setData({medData: { curr: perMonth[0], comp_prev: currprev, avg: (Math.round(parseFloat(sum)/total_days * 100) / 100).toFixed(2),}})
+
+    wx.navigateTo({
+      url: "../medTracking/medTracking",
+    })
+  },
   
 
   onGetOpenid: function() {

@@ -192,26 +192,13 @@ function data_object(userInfo) {
 }
 
 Page({
-  data_object: function(e) {
-    const allDates = app.globalData.userData.med_date;
-    var curr_day = new Date();
-    const total_days = curr_day - app.globalData.userData.reg_time;
-    var perMonth = [0,0,0,0,0,0,0,0,0,0,0,0];
-    var sum = 0;
-    for (var i = 0; i < allDates.length; i++) {
-      var date = new Date(allDates[i]);
-      var month = date.getMonth();
-      perMonth[month] = perMonth[month] + 1;
-      sum++;
-    }
-  
-  
-    var person = {
-      curr: perMonth[0],
-      comp_prev: perMonth[0] - perMonth[1],
-      avg: sum/total_days,
-    };
-    this.setData({userData : person})
+  updateData: function (){
+    var pages=getCurrentPages();
+    var prevPage=pages[pages.length-2];
+    this.setData({
+         userData: prevPage.data.medData
+     })
+
   },
   /**
        * The initial data of the page
@@ -221,7 +208,7 @@ Page({
       onInit: initChart
     },
 
-    userData: {curr:5}
+    userData: {},
 
   },
 
@@ -232,7 +219,7 @@ Page({
   /**
        * Life cycle function-monitor page loading
    */
-  load: function () {
-    this.data_object()
-  },
+  onLoad: function(){
+   this.updateData()
+  }
 })
