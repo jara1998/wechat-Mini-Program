@@ -73,7 +73,18 @@ function initChart(canvas, width, height) {
     title: {
       text: '服药周期图表'
     },
-    tooltip: {},
+    tooltip: {
+      trigger: 'axis',
+      triggerOn: 'click',
+      confine: true,
+      formatter: function(params) {
+        var score = params[0].value;
+        if (typeof score == 'undefined') {
+          return null;
+        }
+        return score + "天";
+      }
+    },
     xAxis: {
       data: [(currMonth(-5) + 1) +"月", (currMonth(-4) + 1) +"月", (currMonth(-3) + 1) +"月",(currMonth(-2) + 1) + "月",(currMonth(-1) + 1) + "月", (currMonth(0) + 1) +"月"]
     },
