@@ -61,12 +61,14 @@
   height: 10vh;
 }
 
-.button-container button {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  display: flex;
-  border-radius: 0;
+button {
+  transform: scale(0.7);
   overflow: visible;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.button-image {
+  transform: scale(0.5);
 }

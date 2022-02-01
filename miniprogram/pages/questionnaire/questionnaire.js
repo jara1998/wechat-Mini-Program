@@ -1,4 +1,7 @@
 const app = getApp();
+const FIRST_PAGE = 1;
+const LAST_PAGE = 10;
+const QUERY = wx.createSelectorQuery()
 
 Page({
   data: {
@@ -8,6 +11,9 @@ Page({
                 {option: 3, value: '感到疲劳或没有精神'}, 
                 {option: 4, value: '胃口不好或饮食过度'}, 
                 {option: 5, value: '对自己感到难过；感觉自己是个失败者或让自己或家人失望'},
+                {option: 6, value: '做事不能集中注意力，如读报纸或看电视'},
+                {option: 7, value: '走路或说话很慢，慢到引人注意（或者相反，坐立 不安或好动，比通常情况下走动的时间多）'},
+                {option: 8, value: '想到自己最好去死或者以某种方式伤害自己'},
               ],
 
     options: [{option: 0, value: '很少或没有时间（不到1天）'},
@@ -16,10 +22,51 @@ Page({
               {option: 3, value: '大部分或所有时间（5-7天）'}
             ],
             
-    answers: [-1, -1, -1, -1, -1, -1],
-    highestScore: 18.0,  // 6 * 3
+    answers: [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    highestScore: 27.0,  // 6 * 3
     is_completed: false,
-    pageNum: 0
+    pageNum: 1,
+  },
+
+  toPrevPage: function() {
+    let num; 
+
+    if (this.data.pageNum != FIRST_PAGE) {
+      num = this.data.pageNum - 1;
+    } else {
+      num = FIRST_PAGE;
+    } 
+
+    this.setData({
+      pageNum: num
+    });
+
+    this.clearSelection
+  },
+
+  toNextPage: function() {
+    let num; 
+
+    if (this.data.pageNum != LAST_PAGE) {
+      num = this.data.pageNum + 1;
+    } else {
+      num = LAST_PAGE;
+    }
+
+    this.setData({
+      pageNum: num
+    });
+
+    this.clearSelection();
+  },
+
+  clearSelection: function() {
+    let buttons = QUERY.selectAll(". radio").fields();
+    console.log(buttons);
+    for (let i = 0; i < buttons.length; i++) {
+      let button = buttons[i];
+      button.checked = false;
+    }
   },
 
   onLoad: function (options) {
@@ -40,7 +87,8 @@ Page({
       is_completed: is_completed
     });
   },
-/////////////////////////// "Submit" - In progress
+
+  /////////////////////////// "Submit" - In progress
   onTap(event) {
     console.log(app.globalData.userData.mood_track);
     console.log(event.currentTarget.dataset.index);
@@ -52,22 +100,13 @@ Page({
 
     // this.data.answers[questionNum] = this.data.options[answerNum].option;
     var temp = this.data.answers
-    temp[questionNum] = this.data.options[answerNum].option
+    temp[questionNum - 1] = this.data.options[answerNum].option
     this.setData({
       answers: temp
     })
     console.log(temp)
     
   },
-
-  // radio_change(e) {
-  //   const items = this.data.options
-  //   for (let i = 0; i < items.length; i++) {
-  //     if (items[i].value === e.detail.value) {
-
-  //     }
-  //   }
-  // },
 
   mood_submit() {
     const allScores = this.data.answers

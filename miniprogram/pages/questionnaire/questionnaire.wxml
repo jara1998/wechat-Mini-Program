@@ -6,39 +6,44 @@
   <text>在过去的七天，您受一下问题困扰的频率如何?</text>
 </view>
 
-<!-- <view wx:if="{{!is_completed}}">
-  <view class="question-set" wx:for="{{questions}}">
-    <text class="question">
-      {{index + 1}}. {{item.value}}
-    </text>
-    <radio-group mark:groupMark="{{index}}" class="radio-set">
-      <label class="radio-label" wx:for="{{options}}" bindtap="onTap" data-index="{{index}}">
-        <view class="choices">
-          <radio class="radio" value="{{item.value}}" />
-          <view class="hline"></view>
-          <view class="vline"></view>
-          <text class="option" >{{item.value}}</text>
-        </view>
-        </label>
-    </radio-group>
-  </view>
-
-  <view class="uploader">
-      <button class="submit-button" bindtap="mood_submit" hover-class="button-submit" style="width: 140vw">
-      提交
-      </button> 
-  </view>
-</view>
-<view wx:else>
-  <text>You are done for the questionare of the week</text>
-</view> -->
-
 <view class="container" wx:if="{{!is_completed}}">
-  <view class="question" wx:if="{{ pageNum == 0 }}">
-    <text>{{pageNum + 1}}. {{questions[pageNum].value}}</text>
+  <view class="question" wx:if="{{ pageNum == 1 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
     <image src="../../images/questionnaire-1.svg"/>
   </view>
-  <radio-group mark:groupMark="{{index}}" class="radio-set">
+  <view class="question" wx:if="{{ pageNum == 2 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <image src="../../images/questionnaire-2.svg"/>
+  </view>
+  <view class="question" wx:if="{{ pageNum == 3 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <image src="../../images/questionnaire-3.svg"/>
+  </view>
+  <view class="question" wx:if="{{ pageNum == 4 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <image src="../../images/questionnaire-4.svg"/>
+  </view>
+  <view class="question" wx:if="{{ pageNum == 5 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <image src="../../images/questionnaire-5.svg"/>
+  </view>
+  <view class="question" wx:if="{{ pageNum == 6 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <image src="../../images/questionnaire-6.svg"/>
+  </view>
+  <view class="question" wx:if="{{ pageNum == 7 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <!-- <image src="../../images/questionnaire-1.svg"/> -->
+  </view>
+  <view class="question" wx:if="{{ pageNum == 8 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <!-- <image src="../../images/questionnaire-1.svg"/> -->
+  </view>
+  <view class="question" wx:if="{{ pageNum == 9 }}">
+    <text>{{pageNum}}. {{questions[pageNum].value}}</text>
+    <!-- <image src="../../images/questionnaire-1.svg"/> -->
+  </view>
+  <radio-group mark:groupMark="{{pageNum}}" class="radio-set" wx:if="{{ pageNum != 10}}">
     <label class="radio-label" wx:for="{{options}}" bindtap="onTap" data-index="{{index}}">
       <view class="choices">
         <radio class="radio" value="{{item.value}}" />
@@ -47,11 +52,11 @@
     </label>
   </radio-group>
   <view class="button-container">
-        <button bindtap="toPrevPage">
-          <image src="../../images/button-previous.svg"/>
-        </button>
-        <button bindtap="toNextPage">
-          <image src="../../images/button-next.svg"/>
-        </button>
+    <button bindtap="toPrevPage" wx:if="{{ pageNum != 1 }}">
+      <image class="button-image" src="../../images/button-previous.svg"/>
+    </button>
+    <button bindtap="toNextPage" wx:if="{{ pageNum != 10 }}">
+      <image class="button-image" src="../../images/button-next.svg"/>
+    </button>
   </view>
 </view>
