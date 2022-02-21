@@ -1,0 +1,14 @@
+<view class="menu-container">
+    <text>意见反馈</text>
+    <view class="arrow right"></view>
+</view>
+
+<view class="menu-container">
+    <text>隐私政策</text>
+    <view class="arrow right"></view>
+</view>
+
+<view class="menu-container">
+    <text>关于我们</text>
+    <view class="arrow right"></view>
+</view>

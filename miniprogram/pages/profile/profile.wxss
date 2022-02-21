@@ -1,0 +1,28 @@
+.user-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userinfo-block-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

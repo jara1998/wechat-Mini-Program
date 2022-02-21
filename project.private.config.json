@@ -80,6 +80,18 @@
                     "pathName": "pages/calendar/calendar",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/profile/profile",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

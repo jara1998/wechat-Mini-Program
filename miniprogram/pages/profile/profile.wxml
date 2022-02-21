@@ -1,0 +1,19 @@
+<view class="user-info-container">
+    <image class="userinfo-block-avatar"
+           src="{{avatarUrl}}" 
+           mode="cover">
+    </image>
+    <text>me</text>
+</view>
+
+<view class="summary-container">
+    <text>
+    已经完成2个模块， 还有6个自选模块
+    已经使用该小程序 3周
+    </text>
+</view>
+
+<view class="menu-container">
+    <button>查看收藏内容</button>
+    <button bindtap="toSettingMenu">设置</button>
+</view>
