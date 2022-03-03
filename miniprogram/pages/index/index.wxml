@@ -54,6 +54,11 @@
     <button bindtap="to_new_mood_tracking">go to new Questionnaire</button>
   </view>
 
+
+<view class="uploader">
+    <button bindtap="toMedTracking">go to MedTracking</button>
+</view>
+
   <!-- 登录 --> 
   <view class="uploader" wx:if="{{!logged}}">
     <button  bindtap="authorization" style="position: relative; left: -29rpx; top: 0rpx">Login</button> 

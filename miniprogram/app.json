@@ -16,7 +16,8 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room",
-    "pages/new_mood_tracking/new_mood_tracking"
+    "pages/medTracking/medTracking",
+    "pages/moodTracking/moodTracking"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
