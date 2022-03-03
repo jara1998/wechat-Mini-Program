@@ -14,7 +14,7 @@
         <calendar 
         weeks-type="cn" 
         cell-size="40" 
-        next="{{true}}" prev="{{true}}" show-more-days="{{true}}"
+        next="{{false}}" prev="{{false}}" show-more-days="{{false}}"
         calendar-style="demo5-calendar" 
         header-style="demo5-header" 
         board-style="demo5-bord" 

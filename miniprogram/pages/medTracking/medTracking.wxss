@@ -22,15 +22,22 @@ ec-canvas {
 
 .stats{
   font-size: 18px;
-  float: left;
   color: #979797;
-  margin: 10px;
+  margin-right: 0;
+  margin-left: 15%;
   padding-top: 3px;
+  display: inline-block;
+  width: 40%;
 }
 
 .data{
-  float: left;
   font-size: 24px;
   color: #1C6DCD;
-  margin: 10px;
+  margin-left: 5%;
+  display: inline-block;
+  width: 30%;
+}
+
+.parent{
+  margin-bottom: 10%;
 }

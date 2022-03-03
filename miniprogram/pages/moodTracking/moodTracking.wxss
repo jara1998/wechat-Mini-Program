@@ -2,7 +2,7 @@
 
 ec-canvas {
   width: 90%;
-  height: 600rpx;
+  height: 1200rpx;
 }
 
 .body {
