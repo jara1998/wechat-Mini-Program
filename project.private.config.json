@@ -50,8 +50,13 @@
           "scene": null
         },
         {
+<<<<<<< HEAD
+          "name": "pages/infoPage/infoPage",
+          "pathName": "pages/infoPage/infoPage",
+=======
           "name": "pages/index/index",
           "pathName": "pages/index/index",
+>>>>>>> main
           "query": "",
           "scene": null
         }

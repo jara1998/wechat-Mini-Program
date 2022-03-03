@@ -70,7 +70,6 @@ Page({
       complete: out => {
         console.log('call function completed')
         wx.hideLoading()
-        console.log(app.globalData.userData)
       }
     })
   },
@@ -160,6 +159,11 @@ Page({
     })
   },
 
+  toMain: function() {
+    wx.switchTab({
+      url: '../mainpage/mainpage',
+    })
+  },
   toMedTracking: function() {
     this.data_object()
   },

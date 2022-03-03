@@ -1,0 +1,38 @@
+/* pages/infoPage/infoPage.wxss */
+.background {
+  background-color: #F6F6F6;
+}
+
+.content {
+  background-color: #ffffff;
+  margin-top: 40px;
+  margin-left: 27px;
+  padding-right: 10px;
+  padding-top: 5px;
+  border-radius: 6px;
+}
+
+.content > .title {
+  margin-left: 10px;
+}
+
+.content > .text {
+  margin-left: 15px;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+
+#if {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.sub_title {
+  margin-top: 8px;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
