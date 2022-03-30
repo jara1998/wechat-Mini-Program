@@ -1,36 +1,28 @@
-.moledule {
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: aquamarine;
+  flex-direction: column;
+}
+
+.moledule {
+  background-color: rgb(250, 250, 250);
   position: relative;
-  margin-top: 3.0rem;
-  margin-bottom: 2.5rem;
-  border-radius: .5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  border-radius: .7rem;
   width: 90%;
-  transition: 250ms;
-}
-
-.moledule:hover {
-  transform: scale(1.03);
-}
-
-#moledule-one {
-  background-color: #8D92FF;
-}
-
-#moledule-two {
-  background-color: #72bffa;
-}
-
-#moledule-three {
-  background-color: #fc672d;
+  height: 10rem;
+  z-index: -1;
 }
 
 .content {
+  position: relative;
+  width: 96%;
+  height: 10rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
 }
 
 .check-circle {
@@ -41,17 +33,58 @@
   border-width: 2px;
   border-color: black;
   margin-bottom: 70px;
+  margin-right: 5px;
 }
 
-.check-circle, .title, .length {
+.check-circle, text, .length {
   margin-top: 10px;
   margin-left: 10px;
 }
 
-.graph {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  height: 130px;
-  width: 130px;
+.background {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 97%;
+  height: auto;
+}
+
+#moledule-three {
+  background-color: #BDD6FF;
+}
+
+#moledule-three > .content {
+  height: 98%;
+  flex-direction: column;
+}
+
+#info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#info-img {
+  height: 47px;
+  width: 49px;
+  margin-right: 3%;
+  margin-top: 3%;
+  margin-bottom: 6px;
+}
+
+#text {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+}
+
+.title {
+  padding-top: 5px;
+  padding-left: 18px;
+}
+
+#moledule-three .title {
+  padding-left: 1px;
 }

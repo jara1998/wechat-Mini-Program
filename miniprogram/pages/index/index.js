@@ -159,6 +159,11 @@ Page({
     })
   },
 
+  toMain: function() {
+    wx.switchTab({
+      url: '../mainpage/mainpage',
+    })
+  },
   toMedTracking: function() {
     this.data_object()
   },

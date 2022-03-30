@@ -16,6 +16,7 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room",
+    "pages/infoPage/infoPage",
     "pages/medTracking/medTracking",
     "pages/moodTracking/moodTracking"
   ],
@@ -27,6 +28,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "custom": true,
     "color": "#959494",
     "selectedColor": "#1C6DCD",
     "backgroundColor": "#ffffff",
@@ -34,14 +36,14 @@
     "list": [
       {
         "selectedIconPath": "images/selected-emotion.png",
-        "iconPath": "images/emotion.png",
-        "pagePath": "pages/mainpage/mainpage",
-        "text": "情绪记录"
+        "iconPath": "images/Group.png",
+        "pagePath": "pages/questionnaire/questionnaire",
+        "text": "情绪追踪"
       },
       {
         "selectedIconPath": "images/selected-med.png",
         "iconPath": "images/med.png",
-        "pagePath": "pages/mainpage/mainpage",
+        "pagePath": "pages/calendar/calendar",
         "text": "服药记录"
       },
       {
@@ -63,8 +65,8 @@
   "style": "v2",
   "plugins": {
     "calendar": {
-        "version": "1.1.3",
-        "provider": "wx92c68dae5a8bb046"
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
     }
-}
+  }
 }
