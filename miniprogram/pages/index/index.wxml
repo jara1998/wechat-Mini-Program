@@ -51,7 +51,7 @@
   </view>
 
   <view class="uploader">
-    <button bindtap="to_new_mood_tracking">go to new Questionnaire</button>
+    <button bindtap="toMoodTracking">go to new Mood Tracking</button>
   </view>
 
 
